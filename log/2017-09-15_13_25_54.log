@@ -1,0 +1,9 @@
+2017-09-15 13:25:55,937 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
+2017-09-15 13:26:10,635 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-15 13:26:10,638 - log.py[line:69] - INFO:   run 登录测试.
+2017-09-15 13:26:25,640 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/8809eca4-0f3a-400e-ad14-2237ae78892f/screenshot {"sessionId": "8809eca4-0f3a-400e-ad14-2237ae78892f"}
+2017-09-15 13:26:27,105 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-15 13:26:27,108 - Test_Case.py[line:39] - ERROR: 1
+2017-09-15 13:26:27,108 - log.py[line:71] - INFO:   登录测试 end.
+2017-09-15 13:26:27,108 - remote_connection.py[line:478] - DEBUG: DELETE http://127.0.0.1:4723/wd/hub/session/8809eca4-0f3a-400e-ad14-2237ae78892f {"sessionId": "8809eca4-0f3a-400e-ad14-2237ae78892f"}
+2017-09-15 13:26:28,703 - remote_connection.py[line:565] - DEBUG: Finished Request

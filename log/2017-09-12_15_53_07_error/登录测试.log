@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>2017-09-12 15:53:27,714 - log.py[line:69] - INFO:   run 登录测试.
+2017-09-12 15:53:42,726 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/533c68f9-2e13-4d16-8f2f-11bf14b5d4e3/context {"sessionId": "533c68f9-2e13-4d16-8f2f-11bf14b5d4e3", "name": "WEBVIEW"}
+2017-09-12 15:53:42,851 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-12 15:53:42,851 - Test_Case.py[line:46] - ERROR: Message: No such context found.
+

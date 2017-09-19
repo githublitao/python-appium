@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+    <!--locator of page map info -->
+
+    <page pageName="login">
+        <!--Locator lists -->
+        <locator type="xpath" timeOut="3" value='//*[@id="loginForm"]/div[1]/div[1]/div[2]/input'>账号</locator>
+        <locator type="xpath" timeOut="3" value='//*[@id="loginForm"]/div[1]/div[2]/div[2]/input'>密码</locator>
+        <locator type="xpath" timeOut="3" value='//*[@id="loginbutton"]'>登录</locator>
+        <locator type="xpath" timeOut="3" value='//*[@class="afPopup show"]'>账户或密码错误</locator>
+    </page>
+    <page pageName="live">
+        <!--Locator lists -->
+        <locator type="xpath" timeOut="10" value='//*[@id="pageTitle"]'>生活</locator>
+        <locator type="xpath" timeOut="3" value='//*[@id="loginForm"]/div[1]/div[2]/div[2]/input'>密码</locator>
+        <locator type="xpath" timeOut="3" value='//*[@id="loginForm"]/div[1]/div[2]/div[2]/input'>登录</locator>
+    </page>
+</map>

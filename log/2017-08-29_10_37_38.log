@@ -1,0 +1,95 @@
+Tue, 29 Aug 2017 10:37:52 log.py[line:75] INFO   run 登录测试.
+Tue, 29 Aug 2017 10:38:07 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/context {"sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "name": "WEBVIEW"}
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element/0.6173214754089713-1/value {"text": "18202886913", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "id": "0.6173214754089713-1", "value": ["1", "8", "2", "0", "2", "8", "8", "6", "9", "1", "3"]}
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element/0.6173214754089713-2/click {"sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "id": "0.6173214754089713-2"}
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:11 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element/0.6173214754089713-2/value {"text": "123456", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "id": "0.6173214754089713-2", "value": ["1", "2", "3", "4", "5", "6"]}
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@id=\"loginbutton\"]"}
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element/0.6173214754089713-3/click {"sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "id": "0.6173214754089713-3"}
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:38:12 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:13 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870/element {"using": "xpath", "sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:38:13 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:13 log.py[line:77] INFO   登录测试 end.
+Tue, 29 Aug 2017 10:38:13 remote_connection.py[line:478] DEBUG DELETE http://127.0.0.1:4723/wd/hub/session/e2ea6eb0-e90d-4283-84e6-2b7f92b33870 {"sessionId": "e2ea6eb0-e90d-4283-84e6-2b7f92b33870"}
+Tue, 29 Aug 2017 10:38:14 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:15 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
+Tue, 29 Aug 2017 10:38:28 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:28 log.py[line:75] INFO   run 登录测试1.
+Tue, 29 Aug 2017 10:38:43 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/context {"sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "name": "WEBVIEW"}
+Tue, 29 Aug 2017 10:38:46 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:46 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:46 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:46 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element/0.8316134267952293-1/value {"text": "18202886913", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "id": "0.8316134267952293-1", "value": ["1", "8", "2", "0", "2", "8", "8", "6", "9", "1", "3"]}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element/0.8316134267952293-2/click {"sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "id": "0.8316134267952293-2"}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element/0.8316134267952293-2/value {"text": "123456", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "id": "0.8316134267952293-2", "value": ["1", "2", "3", "4", "5", "6"]}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@id=\"loginbutton\"]"}
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:47 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element/0.8316134267952293-3/click {"sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "id": "0.8316134267952293-3"}
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c/element {"using": "xpath", "sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:48 log.py[line:77] INFO   登录测试1 end.
+Tue, 29 Aug 2017 10:38:48 remote_connection.py[line:478] DEBUG DELETE http://127.0.0.1:4723/wd/hub/session/9127932b-0f47-4a36-a203-efd63b5fa26c {"sessionId": "9127932b-0f47-4a36-a203-efd63b5fa26c"}
+Tue, 29 Aug 2017 10:38:50 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:38:51 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
+Tue, 29 Aug 2017 10:39:04 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:04 log.py[line:75] INFO   run 登录测试3.
+Tue, 29 Aug 2017 10:39:19 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/context {"sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "name": "WEBVIEW"}
+Tue, 29 Aug 2017 10:39:23 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:23 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+Tue, 29 Aug 2017 10:39:23 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:23 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element/0.29790609260089695-1/value {"text": "18202886913", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "id": "0.29790609260089695-1", "value": ["1", "8", "2", "0", "2", "8", "8", "6", "9", "1", "3"]}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element/0.29790609260089695-2/click {"sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "id": "0.29790609260089695-2"}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element/0.29790609260089695-2/value {"text": "123123", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "id": "0.29790609260089695-2", "value": ["1", "2", "3", "1", "2", "3"]}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@id=\"loginbutton\"]"}
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:24 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element/0.29790609260089695-3/click {"sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "id": "0.29790609260089695-3"}
+Tue, 29 Aug 2017 10:39:25 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:25 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:25 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:25 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:25 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:26 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:26 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:26 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:26 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:27 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:27 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:27 remote_connection.py[line:478] DEBUG POST http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f/element {"using": "xpath", "sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f", "value": "//*[@class=\"afPopup show\"]"}
+Tue, 29 Aug 2017 10:39:27 remote_connection.py[line:565] DEBUG Finished Request
+Tue, 29 Aug 2017 10:39:28 Test_Case.py[line:94] ERROR Message: 
+
+Tue, 29 Aug 2017 10:39:28 mkdir_log_directory.py[line:29] INFO H:\project\Nidone_appium\log\2017-08-29_10_37_38_error目录创建成功
+Tue, 29 Aug 2017 10:39:29 log.py[line:55] INFO 错误截图已保存在 H:\project\Nidone_appium\log\2017-08-29_10_37_38_error
+Tue, 29 Aug 2017 10:39:30 log.py[line:69] INFO 记录错误日志
+Tue, 29 Aug 2017 10:39:30 log.py[line:77] INFO   登录测试3 end.
+Tue, 29 Aug 2017 10:39:30 remote_connection.py[line:478] DEBUG DELETE http://127.0.0.1:4723/wd/hub/session/bfcad5b5-cf6c-4c16-a179-23efccb6f80f {"sessionId": "bfcad5b5-cf6c-4c16-a179-23efccb6f80f"}
+Tue, 29 Aug 2017 10:39:31 remote_connection.py[line:565] DEBUG Finished Request

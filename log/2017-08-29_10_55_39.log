@@ -1,0 +1,56 @@
+2017-08-29 10:56:42,496 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/context {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "name": "WEBVIEW"}
+2017-08-29 10:56:45,904 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:45,904 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+2017-08-29 10:56:45,982 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:45,982 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-1/value {"text": "18202886913", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-1", "value": ["1", "8", "2", "0", "2", "8", "8", "6", "9", "1", "3"]}
+2017-08-29 10:56:46,338 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,339 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+2017-08-29 10:56:46,397 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,397 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-2/click {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-2"}
+2017-08-29 10:56:46,661 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,661 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+2017-08-29 10:56:46,693 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,694 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-2/value {"text": "123456", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-2", "value": ["1", "2", "3", "4", "5", "6"]}
+2017-08-29 10:56:46,950 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,950 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginbutton\"]"}
+2017-08-29 10:56:47,005 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,005 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-3/click {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-3"}
+2017-08-29 10:56:47,229 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,230 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:47,295 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,795 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:47,832 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:48,332 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:48,368 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:48,368 - remote_connection.py[line:478] - DEBUG: DELETE http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894 {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894"}
+2017-08-29 10:56:50,036 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:51,039 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
+2017-08-29 10:56:54,565 - remote_connection.py[line:565] - DEBUG: Finished Request
+29 10:56:42,496 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/context {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "name": "WEBVIEW"}
+2017-08-29 10:56:45,904 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:45,904 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+2017-08-29 10:56:45,982 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:45,982 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-1/value {"text": "18202886913", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-1", "value": ["1", "8", "2", "0", "2", "8", "8", "6", "9", "1", "3"]}
+2017-08-29 10:56:46,338 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,339 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+2017-08-29 10:56:46,397 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,397 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-2/click {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-2"}
+2017-08-29 10:56:46,661 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,661 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginForm\"]/div[1]/div[2]/div[2]/input"}
+2017-08-29 10:56:46,693 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,694 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-2/value {"text": "123456", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-2", "value": ["1", "2", "3", "4", "5", "6"]}
+2017-08-29 10:56:46,950 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:46,950 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@id=\"loginbutton\"]"}
+2017-08-29 10:56:47,005 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,005 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element/0.10409723757766187-3/click {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "id": "0.10409723757766187-3"}
+2017-08-29 10:56:47,229 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,230 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:47,295 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:47,795 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:47,832 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:48,332 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894/element {"using": "xpath", "sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894", "value": "//*[@class=\"afPopup show\"]"}
+2017-08-29 10:56:48,368 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:48,368 - remote_connection.py[line:478] - DEBUG: DELETE http://127.0.0.1:4723/wd/hub/session/70ad8d7b-bdd5-4201-be9e-88f086dfb894 {"sessionId": "70ad8d7b-bdd5-4201-be9e-88f086dfb894"}
+2017-08-29 10:56:50,036 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-08-29 10:56:51,039 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
+2017-08-29 10:56:54,565 - remote_connection.py[line:565] - DEBUG: Finished Request
