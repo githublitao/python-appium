@@ -10,4 +10,44 @@ Created on 2017年8月22日
 
 class WrongLocation(Exception):
     def __init__(self, err='错误的元素定位方式'):
-        Exception.__init__(self,err)
+        Exception.__init__(self, err)
+
+
+class ReadXmlError(Exception):
+    def __init__(self, err='Xml读取初始化失败'):
+        Exception.__init__(self, err)
+
+
+class MailInitializationError(Exception):
+    def __init__(self, err='邮件初始化'):
+        Exception.__init__(self, err)
+
+
+class GetDriverError(Exception):
+    def __init__(self, err='初始化driver失败'):
+        Exception.__init__(self, err)
+
+
+class OpenXlsError(Exception):
+    def __init__(self, err='打开用例文件失败'):
+        Exception.__init__(self, err)
+
+
+class CreatTestCaseError(Exception):
+    def __init__(self, err='创建用例脚本失败'):
+        Exception.__init__(self, err)
+
+
+class CloseFileError(Exception):
+    def __init__(self, err='关闭文件是发生错误'):
+        Exception.__init__(self, err)
+
+
+class ReadDeviceError(Exception):
+    def __init__(self, err='读取待测设备时发生错误'):
+        Exception.__init__(self, err)
+
+
+class LogConfigError(Exception):
+    def __init__(self, err='日志配置初始化错误'):
+        Exception.__init__(self, err)

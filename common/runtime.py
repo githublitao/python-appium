@@ -6,7 +6,6 @@ Created on 2017年8月22日
 @author: li tao
 """
 import time
-
 runtime = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
 
 

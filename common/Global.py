@@ -15,7 +15,7 @@ class Locator:
     """
 
     def __init__(self):
-        self.page = BastPage(Path.page_path())
+        self.page = BastPage(Path.scan_files(prefix='page'))
 
     def get_type(self, page_name, locator):
         l = self.page.run(page_name, locator)

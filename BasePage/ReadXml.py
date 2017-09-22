@@ -6,19 +6,29 @@ Created on 2017年8月24日
 @author: li tao
 """
 import xml.etree.ElementTree
+import logging
+from Exception import Custom_exception
 
 
 class BastPage:
     """
     封装读取page.xml
     """
-
+    # filename    page.xml文件路径
     def __init__(self, filename):
-        self.level = 1  # 节点的深度从1开始
-        self.root = xml.etree.ElementTree.parse(filename).getroot()
-        self.result_list = []
+        try:
+            self.level = 1  # 节点的深度从1开始
+            self.root = xml.etree.ElementTree.parse(filename).getroot()
+            self.result_list = []
+        except Exception as e:
+            logging.error(e)
+            raise Custom_exception.ReadXmlError
 
-# 遍历所有的节点
+    # 遍历所有的节点
+    # root_node
+    # level 节点深度
+    # page_name  页面名称
+    # locator   元素名称
     def walk_data(self, root_node, level, page_name, locator):
         if root_node.text.encode('utf-8') == locator:
             self.result_list = root_node.attrib
@@ -35,6 +45,8 @@ class BastPage:
             except:
                 pass
 
+    #  page_name 页面名称
+    #  locator  元素名称
     def run(self, page_name, locator):
         result = self.walk_data(self.root, self.level, page_name, locator)
         return result

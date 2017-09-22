@@ -5,6 +5,7 @@
 """
 
 
+#  case_num  总的测试用例数量
 def test_case_list(case_num):
     while True:
         try:
@@ -13,7 +14,7 @@ def test_case_list(case_num):
             if int(all_or_part) == 2:
                 while True:
                     fist = raw_input("请输入开始用例编号》》 ")
-                    end = raw_input("请输入末尾用例编号》》：")
+                    end = raw_input("请输入末尾用例编号》》")
                     if int(fist) < 1:
                         print "开始用例序号必须大于等于1"
                         raise

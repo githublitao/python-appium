@@ -20,6 +20,7 @@ class Element:
         self.driver = driver
 
     # 获取页面元素
+    # message  单个元素信息列表包含，方式tpye， 超时时间time， 值value
     def get(self, message):
         way, timeout, value = message
         way_list = ['xpath', 'id', 'ids', 'name', 'classes_name']
@@ -43,6 +44,7 @@ class Element:
                 raise Custom_exception.WrongLocation
 
     # 等待页面元素加载
+    # message  单个元素信息列表包含，方式tpye， 超时时间time， 值value
     def wait_element(self, message):
         way, timeout, value = message
         timeout = int(timeout)
@@ -69,6 +71,7 @@ class Element:
         return element
 
     # 截图
+    # path  截图存放位置路径
     def get_screen(self, path):
         self.driver.get_screenshot_as_file(path)
 

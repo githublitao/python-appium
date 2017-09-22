@@ -32,7 +32,7 @@ class Test(ParametrizedTestCase):
             self.OP.send_keys("login", "密码", "123456")
             self.OP.clicks("login", "登录")
         except Exception as e:
-            log.exception_handling(e, self.method_name, u"正确登录", self.OP)
+            log.exception_handling(e, self.method_name, "正确登录", self.OP)
 
     @log.deco(u"正常登录1")
     def test_login1(self):
@@ -42,4 +42,4 @@ class Test(ParametrizedTestCase):
             self.OP.send_keys("login", "密码", "123")
             self.OP.clicks("login", "登录")
         except Exception as e:
-            log.exception_handling(e, self.method_name, u"正常登录1", self.OP)
+            log.exception_handling(e, self.method_name, "正常登录1", self.OP)

@@ -5,17 +5,27 @@ Created on 2017年8月22日
 
 @author: li tao
 """
-import ReadData
 import Path
-from case import runlist
+import ReadData
 import log
+from case import run_list
+import logging
+from Exception import Custom_exception
 
 
 @log.deco(u'生成测试用例脚本')
 def test_case():
-    ob = ReadData.Excel(Path.data_path())
-    fist, end = runlist.test_case_list(ob.case_num)
-    f = open(Path.case_py(), 'w')
+    try:
+        ob = ReadData.Excel(Path.scan_files(postfix='.xls'))
+        fist, end = run_list.test_case_list(ob.case_num)
+    except Exception as e:
+        logging.error(e)
+        raise Custom_exception.OpenXlsError
+    try:
+        f = open(Path.scan_files(prefix='Test_Case'), 'w')
+    except Exception as e:
+        logging.error(e)
+        raise Custom_exception.CreatTestCaseError
     f.write('#! /usr/bin/python\n')
     f.write('# -*- coding:utf-8 -*-\n')
     f.write('import unittest\n')
@@ -46,33 +56,48 @@ def test_case():
         f.write('    def %s(self):\n' % ob.get_case_desc(i)[1])
         f.write('        try:\n')
         for j in range(2, len(ob.get_case_desc(i))):
+            # 等待
             if ob.get_case_desc(i)[j][1] == 'sleep':
                 f.write('        time.sleep(%s)\n' % ob.get_case_desc(i)[j][4])
+            # 切换 h5
             elif ob.get_case_desc(i)[j][1] == 'sw_h5':
                 f.write('            self.OP.sw_h5()\n')
+            # 切换app
             elif ob.get_case_desc(i)[j][1] == 'sw_app':
                 f.write('            self.OP.sw_app()\n')
+            # 输入
             elif ob.get_case_desc(i)[j][1] == 'send_keys':
                 f.write('            self.OP.send_keys("%s", "%s", "%s")\n'
                         % (ob.get_case_desc(i)[j][2], ob.get_case_desc(i)[j][3], ob.get_case_desc(i)[j][4]))
+            # 点击
             elif ob.get_case_desc(i)[j][1] == 'clicks':
                 f.write('            self.OP.clicks("%s", "%s")\n'
                         % (ob.get_case_desc(i)[j][2], ob.get_case_desc(i)[j][3]))
+            # 等待
             elif ob.get_case_desc(i)[j][1] == 'wait_element':
                 f.write('            self.OP.wait_element("%s", "%s")\n'
                         % (ob.get_case_desc(i)[j][2], ob.get_case_desc(i)[j][3]))
+            # 物理键返回
             elif ob.get_case_desc(i)[j][1] == 'go_back':
                 f.write('            self.OP.go_back()\n')
+            # 向上滑动
             elif ob.get_case_desc(i)[j][1] == 'swipe_up':
                 f.write('            self.OP.swipe_up()\n')
+            # 向下滑动
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_down':
                 f.write('            self.OP.swipe_to_down()\n')
+            # 向左滑动
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_left':
                 f.write('            self.OP.swipe_to_left()\n')
+            # 向右滑动
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_right':
                 f.write('            self.OP.swipe_to_right()\n')
         f.write('        except Exception as e:\n')
-        f.write('            log.exception_handling(e, self.method_name, u"%s", self.OP)'
+        f.write('            log.exception_handling(e, self.method_name, "%s", self.OP)'
                 % ob.get_case_desc(i)[0])
         f.write('\n')
-    f.close()
+    try:
+        f.close()
+    except Exception as e:
+        logging.error(e)
+        raise Custom_exception.CloseFileError

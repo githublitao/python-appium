@@ -16,7 +16,6 @@ class Excel:
         try:
             self.data = xlrd.open_workbook(fp)
         except Exception, e:
-            print e
             logging.error("%s" % e)
         try:
             self.case = self.data.sheet_by_name(u'测试用例')

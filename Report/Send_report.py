@@ -5,7 +5,7 @@ Created on 2017年8月22日
 
 @author: li tao
 """
-from common import Path
+from common import Path, log
 import smtplib
 import email.MIMEMultipart
 import email.MIMEText
@@ -13,8 +13,11 @@ import os.path
 import mimetypes  
 import email.MIMEImage
 import configemail
+import logging
 
 
+@log.deco(u'发送邮件')
+# test_time    测试时间
 def send_email(test_time):
     address = configemail.ConfigEmail()
     # 发件人地址
@@ -41,7 +44,7 @@ def send_email(test_time):
         ctype = 'application/octet-stream'
     maintype, subtype = ctype.split('/', 1)
     file_msg = email.MIMEImage.MIMEImage(open(file_name, 'rb').read(), subtype)
-    print ctype, encoding
+    logging.info(ctype, encoding)
     # 设置附件头
     basename = os.path.basename(file_name)
     # 修改邮件头

@@ -6,14 +6,17 @@ Created on 2017年8月22日
 @author: li tao
 """
 import configparser
-import common.Path
+import logging
+from common import Path, log
+from Exception import Custom_exception
 
 
 class ConfigEmail:
     #   读取邮件发送配置信息
-    def __init__(self ):
+    @log.deco(u'邮件信息初始化')
+    def __init__(self):
         config = configparser.ConfigParser()
-        config.read(common.Path.email_path())
+        config.read(Path.scan_files(prefix='email_address'))
         try:
             # 发件人地址
             self.Sender = config['email_address']['Sender']
@@ -26,7 +29,8 @@ class ConfigEmail:
             # 授权码
             self.AuthorizationCode = config['email_address']['AuthorizationCode']
         except Exception as e:
-            print('%s', e)
+            logging.error('%s', e)
+            raise Custom_exception.MailInitializationError
 
     def get_sender(self):
         return self.Sender
