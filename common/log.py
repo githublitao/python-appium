@@ -8,15 +8,15 @@ Created on 2017年8月24日
 import logging
 import Path
 import logging.config
-import os
+import mkdir_log_directory
+import runtime
 
-
-def log_config(time):
+def log_config():
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)  # Log等级总开关
 
     # 第二步，创建一个handler，用于写入日志文件
-    logfile = Path.log_path()+time+'.log'
+    logfile = Path.log_path()+runtime.test_start_time()+'.log'
     fh = logging.FileHandler(logfile, mode='w+')
     fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关
 
@@ -72,3 +72,14 @@ def deco(arg):
         return __deco
     return _deco
 
+
+def exception_handling(e, method_name, test_name, op):
+    logging.error(e)
+    path = Path.log_path() + method_name + '_error'
+    mkdir_log_directory.mk_dir(path)
+    op.screen(path, method_name)
+    path1 = Path.log_path() + runtime.test_start_time() + '.log'
+    log_error = path + '\\' + runtime.test_start_time() + '.log'
+    print path1
+    print log_error
+    error_log(path1, log_error)

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>2017-09-12 15:51:01,671 - log.py[line:69] - INFO:   run 登录测试3.
-2017-09-12 15:51:16,683 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/dba1f4fe-e154-4ea1-972a-8fe4623edc91/context {"sessionId": "dba1f4fe-e154-4ea1-972a-8fe4623edc91", "name": "WEBVIEW"}
-2017-09-12 15:51:16,683 - remote_connection.py[line:565] - DEBUG: Finished Request
-2017-09-12 15:51:16,683 - Test_Case.py[line:84] - ERROR: Message: 
-

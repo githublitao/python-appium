@@ -1,2 +1,0 @@
-2017-09-15 13:07:24,920 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "OPPO R7", "unicodeKeyboard": true, "app": "H:\\project\\Nidone_appium\\app-client-debug-test-2.3.13.apk", "resetKeyboard": true, "platformVersion": "4.4.4", "platformName": "Android"}}
-2017-09-15 13:07:58,891 - remote_connection.py[line:565] - DEBUG: Finished Request

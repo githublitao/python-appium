@@ -9,5 +9,5 @@ Created on 2017年8月22日
 
 
 class WrongLocation(Exception):
-    def __init__(self,err='错误的元素定位方式'):
+    def __init__(self, err='错误的元素定位方式'):
         Exception.__init__(self,err)
