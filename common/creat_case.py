@@ -15,16 +15,12 @@ from Exception import Custom_exception
 
 @log.deco(u'生成测试用例脚本')
 def test_case():
-    try:
-        ob = ReadData.Excel(Path.scan_files(postfix='.xls'))
-        fist, end = run_list.test_case_list(ob.case_num)
-    except Exception as e:
-        logging.error(e)
-        raise Custom_exception.OpenXlsError
+    ob = ReadData.Excel(Path.scan_files(postfix='.xls'))
+    fist, end = run_list.test_case_list(ob.case_num)
     try:
         f = open(Path.scan_files(prefix='Test_Case'), 'w')
     except Exception as e:
-        logging.error(e)
+        log.exception_handling(e)
         raise Custom_exception.CreatTestCaseError
     f.write('#! /usr/bin/python\n')
     f.write('# -*- coding:utf-8 -*-\n')
@@ -93,7 +89,7 @@ def test_case():
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_right':
                 f.write('            self.OP.swipe_to_right()\n')
         f.write('        except Exception as e:\n')
-        f.write('            log.exception_handling(e, self.method_name, "%s", self.OP)'
+        f.write('            log.exception_handling(e, u"%s", self.method_name, self.OP)'
                 % ob.get_case_desc(i)[0])
         f.write('\n')
     try:

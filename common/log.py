@@ -59,17 +59,27 @@ def log_config():
 # file 运行日志存放路径
 # path 错误日志存放路径
 # test_name  日志记录开始位标志
-def error_log(file, path, test_name):
+def error_log(file, path, test_name=None):
     try:
         f = open(file)
         data = f.readlines()
+        num = len(data)
+        r = open(path, 'w+')
+        r.writelines('<?xml version="1.0" encoding="UTF-8"?>')
         for i in range(0, len(data) - 1):
             if test_name in data[i]:
-                r = open(path, 'w+')
-                r.writelines('<?xml version="1.0" encoding="UTF-8"?>')
-                for j in range(i, len(data) - 2):
+                for j in range(i, num - 2):
                     r.writelines(data[j])
                 r.close()
+            else:
+                if num <= 50:
+                    for j in range(0, num-1):
+                         r.writelines(data[j])
+                    r.close()
+                else:
+                    for j in range(num-50, num-1):
+                        r.writelines(data[j])
+                    r.close()
         logging.info('记录错误日志')
     except Exception as e:
         logging.error(e)
@@ -87,11 +97,18 @@ def deco(arg):
 
 
 # 错误处理
-def exception_handling(e, method_name, test_name, op):
+# e 报错内容
+# method_name
+def exception_handling(e, test_name=None, method_name=None, op=None):
     logging.error(e)
-    path = Path.log_path() + method_name + '_error'
+    path = Path.log_path() + runtime.test_start_time() + '_error'
     mkdir_log_directory.mk_dir(path)                # 创建错误日志目录
-    op.screen(path, method_name, runtime.test_start_time())         # 截图
+    if op:
+        op.screen(path, method_name, runtime.test_start_time())         # 截图
     path1 = Path.log_path() + runtime.test_start_time() + '.log'
-    log_error = path + '\\' + runtime.test_start_time() + '.log'    # 记录错误日志文件
-    error_log(path1, log_error, test_name)
+    if test_name:
+        log_error = path + '\\' + test_name + '.log'    # 记录错误日志文件
+        error_log(path1, log_error, test_name)
+    else:
+        log_error = path + '\\' + 'error.log'    # 记录错误日志文件
+        error_log(path1, log_error)

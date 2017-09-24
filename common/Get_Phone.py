@@ -68,7 +68,7 @@ class Phone:
             self.Phone_Model = config['Phone']['Phone_Model']
             self.System_Version = config['Phone']['System_Version']
         except Exception as e:
-            logging.error(e)
+            log.exception_handling(e)
             raise Custom_exception.ReadDeviceError
 
     def model(self):

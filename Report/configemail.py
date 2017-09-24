@@ -29,7 +29,7 @@ class ConfigEmail:
             # 授权码
             self.AuthorizationCode = config['email_address']['AuthorizationCode']
         except Exception as e:
-            logging.error('%s', e)
+            log.exception_handling(e, "邮件信息初始化")
             raise Custom_exception.MailInitializationError
 
     def get_sender(self):

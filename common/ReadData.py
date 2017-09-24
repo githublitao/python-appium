@@ -8,6 +8,8 @@ Created on 2017年5月5日
 import xlrd
 import logging
 import re
+from Exception import Custom_exception
+import log
 
 
 class Excel:
@@ -23,8 +25,8 @@ class Excel:
             self.procedure = self.data.sheet_by_name(u'测试步骤')
             self.procedure_num = self.procedure.nrows               # 测试步骤行数
         except Exception as e:
-            print e
-            logging.error("%s" % e)
+            log.exception_handling(e)
+            raise Custom_exception.OpenXlsError
 
 #   根据传入的测试用例case_id，获得该case的操作步骤
     def get_case_desc(self, case_id):
@@ -32,7 +34,7 @@ class Excel:
         pattern1 = re.compile("'(.*?)'")         # 正则用于匹配字符串
         test_procedure = []                     # 用例操作步骤列表
         test_title = pattern1.findall(str(self.case.row(case_id)[4]).decode("unicode_escape").encode("utf8"))[0]  # 用例标题
-        # 用例方法名称
+        #  用例方法名称
         test_name = pattern1.findall(str(self.case.row(case_id)[3]).decode("unicode_escape").encode("utf8"))[0]
         test_procedure.append(test_title)
         test_procedure.append(test_name)

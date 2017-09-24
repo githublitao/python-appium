@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Exception import Custom_exception
+import log
 
 
 class Element:
@@ -67,8 +68,11 @@ class Element:
 
     # 关闭driver
     def over(self):
-        element = self.driver.quit()
-        return element
+        try:
+            element = self.driver.quit()
+            return element
+        except Exception as e:
+            log.exception_handling(e)
 
     # 截图
     # path  截图存放位置路径
