@@ -74,7 +74,7 @@ def error_log(file, path, test_name=None):
             else:
                 if num <= 50:
                     for j in range(0, num-1):
-                         r.writelines(data[j])
+                        r.writelines(data[j])
                     r.close()
                 else:
                     for j in range(num-50, num-1):

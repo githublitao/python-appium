@@ -6,9 +6,7 @@ Created on 2017年5月5日
 """
 import xlrd
 from xlutils.copy import copy
-from Path import case_path
-from Path import sheet_number_path
-
+import Path
 
 class Excel:
 
@@ -17,27 +15,20 @@ class Excel:
             self.data = xlrd.open_workbook(fp)
         except Exception, e:
             print str(e)
-    #   测试执行失败，写入测试结果，原因，http状态
 
-    def write_fail(self, case_id, result, reason, state):
-        try:
-            wb = copy(self.data)
-            ws = wb.get_sheet(sheet_number_path())
-            ws.write(case_id, 13, state)
-            ws.write(case_id, 14, result )
-            ws.write(case_id, 15, reason)
-            wb.save(case_path())
-        except:
-            print '写入测试结果失败'
-            raise
-    #   测试执行成功，写入测试结果，返回状态
+    def write_fail(self, case_num):
+        length = len(case_num)
+        print length
+        wb = copy(self.data)
+        ws = wb.get_sheet(2)
+        for i in range(0, length):
+            print i
+            extent = len(case_num[i])
+            for j in range(0, extent):
+                ws.write(i+1, j, case_num[i][j])
+        wb.save(Path.father_path+'\\test_report.xls')
 
-    def write(self, case_id, result, state):
-        try:
-            wb=copy(self.data)
-            ws = wb.get_sheet(sheet_number_path())
-            ws.write(case_id, 13, state)
-            ws.write(case_id, 14, result )
-            wb.save(case_path())
-        except Exception as e:
-            print '写入测试结果失败: %s' % e
+
+ob = Excel(Path.scan_files(postfix='case.xls'))
+a = [[1,2,3,45,67,8],[2,3,4,5,667,7,2],[1,2,3,4,656,243,]]
+ob.write_fail(a)
