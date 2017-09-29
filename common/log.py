@@ -38,6 +38,7 @@ def log_config():
         #                     filename=Path.log_path()+time+'.log',
         #                     filemode='w')
     except Exception as e:
+        print e
         raise Custom_exception.LogConfigError
 
 

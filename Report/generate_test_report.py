@@ -52,9 +52,9 @@ Created on 2017年9月28日
 #             #                   actual_result, error_log]
 #             results.append(single_results)
 #         return results
-from common import creat_case
 from common import runtime
 import datetime
+from common import Path
 
 
 def ab(l):
@@ -65,12 +65,18 @@ def ab(l):
     hours = run_time / 60 / 60 % 24
     day = run_time / 60 / 60 / 24
     elapsed_time = ' %s 天 %s 小时 %s 分 %s 秒' % (day, hours, minute, second)
-    total_count = 0
+    total_count = len(l)
     fail_count = 0
     error_count = 0
-    creat_case.test_result_list()
-
-    f = open('./test.html', 'w')
+    for j in range(0, len(l)):
+        if l[j][6] == 'error':
+            error_count += 1
+        if l[j][6] == 'fail':
+            fail_count += 1
+    fail_proportion = round(fail_count / total_count, 2)
+    error_proportion = round(error_count / total_count, 2)
+    success_proportion = 1-fail_proportion-error_proportion
+    f = open(Path.father_path+'\\Test_Report\\'+runtime.test_start_time()+'.html', 'w')
     f.write('''<!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +84,7 @@ def ab(l):
     <title>nidone测试报告</title>
 </head>
 <body>
-    <h1 style="text-indent:2em;">nidone测试报告</h1>
+    <h1 style="text-indent:2em;">nidone6测试报告</h1>
         <p style="text-indent:4em;">测速开始时间:%s</p>
         <p style="text-indent:4em;">测试结束时间:%s</p>
         <p style="text-indent:4em;">测试耗时:%s</p>
@@ -179,12 +185,12 @@ def ab(l):
             function moveIn(obj)
             {
                 obj.title=obj.innerHTML;
-            }
+            }''')
 
-            function init() {
+    f.writelines('''            function init() {
                 //绘制饼图
                 //比例数据和颜色
-                var data_arr = [0.3, 0.3, 0.4];
+                var data_arr = [%s, %s, %s];
                 var color_arr = ["#00FF21", "#FFAA00", "#00AABB"];
                 var text_arr = ["Fail", "Success", "Error"];
 
@@ -194,13 +200,7 @@ def ab(l):
             //页面加载时执行init()函数
             window.onload = init;
         </script>
-</body>
-</html>''')
+</body
+</html>''' % (fail_proportion, success_proportion, error_proportion))
     f.close()
 
-# l = [['1','我的/修改用户资料','修改用户头像','正确上传图片','高','上传成功，对应位置头像同步更新dfasfqaeqfad','error','./2017-08-29_10_37_38.log','./2017-08-29_10_37_38.log'],
-#      ['2', '我的/修改用户资料', '修改用户头像', '正确上传图片', '高', '上传成功，对应位置头像同步更新dfasfqaeqfad', 'fail', './2017-08-29_10_37_38.log',
-#       './2017-08-29_10_37_38.log'],
-#      ['3', '我的/修改用户资料', '修改用户头像', '正确上传图片', '高', '上传成功，对应位置头像同步更新dfasfqaeqfad', '', '',
-#       '']]
-# ab(l)

@@ -114,7 +114,7 @@ def test_case():
 def exception_handling(e, index=None, test_name=None, method_name=None, op=None):
     global l
     logging.error(e)
-    path = Path.log_path() + runtime.test_start_time() + '_error'
+    path = Path.report_path() + runtime.test_start_time() + '_error'
     mkdir_log_directory.mk_dir(path)                # 创建错误日志目录
     path1 = Path.log_path() + runtime.test_start_time() + '.log'
     if index:

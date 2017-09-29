@@ -5,24 +5,23 @@
     <title>nidone测试报告</title>
 </head>
 <body>
-    <h1 style="text-indent:2em;">nidone测试报告</h1>
-        <p style="text-indent:4em;">测速开始时间:</p>
-        <p style="text-indent:4em;">测试结束时间:</p>
-        <p style="text-indent:4em;">测试耗时:</p>
-        <p style="text-indent:4em;">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Success:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-		Error:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <h1 style="text-indent:2em;">nidone6测试报告</h1>
+        <p style="text-indent:4em;">测速开始时间:2017-09-29 23:20:51.827000</p>
+        <p style="text-indent:4em;">测试结束时间:2017-09-29 23:22:39.979000</p>
+        <p style="text-indent:4em;">测试耗时: 0 天 0 小时 1 分 48 秒</p>
+        <p style="text-indent:4em;">Total:2 
+        Fail:0
+        Error:2</p>
         <p style="text-indent:4em;">
             <canvas id="canvas_circle" width="500" height="300" style="border:2px solid #0026ff;" >
                 浏览器不支持canvas
             </canvas>
-        </p>
-        <style type="text/css">
+        </p>        <style type="text/css">
             table {
                 width: 94%;
                 table-layout: fixed;
-                background-color:yellow
-				
-                }
+                background-color:yellow				
+}
             td {
                 white-space: nowrap;
                 overflow: hidden;
@@ -41,24 +40,33 @@
                 <th style="width: 35px;">执行结果</th>
                 <th style="width: 50px;">错误日志</th>
                 <th style="width: 30px;">错误截图</th>
-            </tr>
-            <tr bgcolor="#7cfc00">
+            </tr>            <tr bgcolor="#7cfc00">
                 <td >1</td>
-                <td>我的/修改用户资料</td>
-                <td>修改用户头像</td>
-                <td>正确上传图片</td>
+                <td>登录模块</td>
+                <td>登录</td>
+                <td>正确登录</td>
                 <td>高</td>
-                <td onmouseover="moveIn(this)">上传成功，对应位置头像同步更新dfasfqaeqfadsfasdfqwerweqrweqrfsadfdafwqer</td>
-                <td>success</td>>
-                <td>
-                    <a href="./2017-08-29_10_37_38.log" target="_blank">错误日志</a>
+                <td onmouseover="moveIn(this)">进入首页</td>
+                <td>error</td>>
+                <td>             <a href="file://localhost/D:\project\Nidone_python\Test_Report\2017-09-29_23_20_51_error\正确登录.txt">错误日志</a>
                 </td>>
                 <td>
-                    <a href="./编辑框为空.png" target="_blank>">截图</a>
+                    <a href="file://localhost/D:\project\Nidone_python\Test_Report\2017-09-29_23_20_51_error\test_login2017-09-29_23_20_51.png" target="_blank>">截图</a>
                 </td>
-            </tr>
-        </table>
-
+            </tr>            <tr bgcolor="#7cfc00">
+                <td >2</td>
+                <td>登录模块</td>
+                <td>登录 </td>
+                <td>正常登录1</td>
+                <td>高</td>
+                <td onmouseover="moveIn(this)">进入首页</td>
+                <td>error</td>>
+                <td>             <a href="file://localhost/D:\project\Nidone_python\Test_Report\2017-09-29_23_20_51_error\正常登录1.txt">错误日志</a>
+                </td>>
+                <td>
+                    <a href="file://localhost/D:\project\Nidone_python\Test_Report\2017-09-29_23_20_51_error\test_login12017-09-29_23_20_51.png" target="_blank>">截图</a>
+                </td>
+            </tr>        </table>
         <script>
             //绘制饼图
             function drawCircle(canvasId, data_arr, color_arr, text_arr)
@@ -102,12 +110,10 @@
             function moveIn(obj)
             {
                 obj.title=obj.innerHTML;
-            }
-
-            function init() {
+            }            function init() {
                 //绘制饼图
                 //比例数据和颜色
-                var data_arr = [0.3, 0.3, 0.4];
+                var data_arr = [0.0, 0.0, 1.0];
                 var color_arr = ["#00FF21", "#FFAA00", "#00AABB"];
                 var text_arr = ["Fail", "Success", "Error"];
 
@@ -117,5 +123,5 @@
             //页面加载时执行init()函数
             window.onload = init;
         </script>
-</body>
+</body
 </html>

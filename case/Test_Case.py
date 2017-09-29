@@ -34,3 +34,13 @@ class Test(ParametrizedTestCase):
             self.OP.clicks("login", "登录")
         except Exception as e:
             creat_case.exception_handling(e, index=1, test_name="正确登录", method_name=self.method_name, op=self.OP)
+
+    @log.deco(u"正常登录1")
+    def test_login1(self):
+        try:
+            self.OP.send_keys("login", "账号", "18202886911")
+            self.OP.clicks("login", "密码")
+            self.OP.send_keys("login", "密码", "123")
+            self.OP.clicks("login", "登录")
+        except Exception as e:
+            creat_case.exception_handling(e, index=2, test_name="正常登录1", method_name=self.method_name, op=self.OP)
