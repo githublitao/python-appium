@@ -5,22 +5,29 @@ Created on 2017年8月22日
 
 @author: li tao
 """
-import Path
 import ReadData
-import log
 from case import run_list
-import logging
 from Exception import Custom_exception
+import logging
+import logging.config
+import mkdir_log_directory
+import runtime
+import Path
+import xlwt
+import log
+l = []
 
 
-@log.deco(u'生成测试用例脚本')
+@log.deco(u'初始化用例脚本')
 def test_case():
-    ob = ReadData.Excel(Path.scan_files(postfix='.xls'))
-    fist, end = run_list.test_case_list(ob.case_num)
+    global l
+    case_excel = ReadData.ReadCaseExcel()
+    ob = ReadData.ReadStepExcel()
+    fist, end = run_list.test_case_list(case_excel.case_num)
+    l = ReadData.ReadCaseExcel.result_list(fist, end)
     try:
         f = open(Path.scan_files(prefix='Test_Case'), 'w')
     except Exception as e:
-        log.exception_handling(e)
         raise Custom_exception.CreatTestCaseError
     f.write('#! /usr/bin/python\n')
     f.write('# -*- coding:utf-8 -*-\n')
@@ -28,6 +35,7 @@ def test_case():
     f.write('import time\n')
     f.write('from common import log\n')
     f.write('from common import operation\n')
+    f.write('from common import creat_case\n')
     f.write('# 测试用例\n')
     f.write('\n')
     f.write('\n')
@@ -48,10 +56,10 @@ def test_case():
     f.write('        self.OP.quit()\n')
     for i in range(fist, end):
         f.write('\n')
-        f.write('    @log.deco(u"%s")\n' % ob.get_case_desc(i)[0])
-        f.write('    def %s(self):\n' % ob.get_case_desc(i)[1])
+        f.write('    @log.deco(u"%s")\n' % ob.get_case_desc(i)[1])
+        f.write('    def %s(self):\n' % ob.get_case_desc(i)[2])
         f.write('        try:\n')
-        for j in range(2, len(ob.get_case_desc(i))):
+        for j in range(3, len(ob.get_case_desc(i))):
             # 等待
             if ob.get_case_desc(i)[j][1] == 'sleep':
                 f.write('        time.sleep(%s)\n' % ob.get_case_desc(i)[j][4])
@@ -89,11 +97,141 @@ def test_case():
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_right':
                 f.write('            self.OP.swipe_to_right()\n')
         f.write('        except Exception as e:\n')
-        f.write('            log.exception_handling(e, u"%s", self.method_name, self.OP)'
-                % ob.get_case_desc(i)[0])
+        f.write('            creat_case.exception_handling(e, index=%s, test_name="%s", method_name=self.method_name,'
+                ' op=self.OP)' % (ob.get_case_desc(i)[0], ob.get_case_desc(i)[1]))
         f.write('\n')
     try:
         f.close()
     except Exception as e:
         logging.error(e)
         raise Custom_exception.CloseFileError
+
+
+# 错误处理
+# e 报错内容
+# index 用例编号
+# method_name
+def exception_handling(e, index=None, test_name=None, method_name=None, op=None):
+    global l
+    logging.error(e)
+    path = Path.log_path() + runtime.test_start_time() + '_error'
+    mkdir_log_directory.mk_dir(path)                # 创建错误日志目录
+    path1 = Path.log_path() + runtime.test_start_time() + '.log'
+    if index:
+        log_error = path + '\\' + test_name.decode('utf8') + '.txt'     # 记录错误日志文件
+        way = path + '\\' + method_name + runtime.test_start_time() + '.png'
+        op.screen(way, path)  # 截图
+        log.error_log(path1, log_error, test_name)
+        if 'AssertionError' in e:
+            for i in range(0, len(l)):
+                if index == l[i][0]:
+                    l[i].append('fail')
+                    l[i].append(log_error)
+                    l[i].append(way)
+        else:
+            for i in range(0, len(l)):
+                if index == l[i][0]:
+                    l[i].append('error')
+                    l[i].append(log_error)
+                    l[i].append(way)
+    else:
+        log_error = path + '\\' + 'error.txt'  # 记录错误日志文件
+        log.error_log(path1, log_error)
+    # if op:
+    #     way = path+'\\'+method_name+runtime.test_start_time()+'.png'
+    #     op.screen(way, path)         # 截图
+    # path1 = Path.log_path() + runtime.test_start_time() + '.log'
+    # if test_name:
+    #     log_error = path + '\\' + test_name + '.log'    # 记录错误日志文件
+    #     error_log(path1, log_error, test_name)
+    # else:
+    #     log_error = path + '\\' + 'error.log'    # 记录错误日志文件
+    #     error_log(path1, log_error)
+    # if 'AssertionError' in e:
+    #     for i in range(0, len(List)):
+    #         if index == List[i][0]:
+    #             List[i].append('fail')
+    #         way = path+'\\'+method_name+runtime.test_start_time()+'.png'
+    #         op.screen(way, path)         # 截图
+    #         List[i].append(way)
+    #         log_error = path + '\\' + test_name + '.log'  # 记录错误日志文件
+    #         error_log(path1, log_error, test_name)
+    #         List[i].append(log_error)
+    # else:
+    #     for i in range(0, len(List)):
+    #         if index == List[i][0]:
+    #             List[i].append('error')
+
+# import xlrd
+# from xlutils.copy import copy
+
+
+# class Excel:
+#
+#     def __init__(self, fp):
+#         try:
+#             self.data = xlrd.open_workbook(fp)
+#             self.wb = copy(self.data)
+#             self.ws = self.wb.get_sheet(0)
+#         except Exception, e:
+#             print str(e)
+#
+#     def result_list(self, case_id, result, png):
+#         wb = copy(self.data)
+#         ws = wb.get_sheet(0)
+#         for i in range(0, length):
+#             print i
+#             extent = len(case_num[i])
+#             for j in range(0, extent):
+#                 ws.write(i+1, j, case_num[i][j])
+#         wb.save(Path.father_path+u'\\测试结果.xls')
+
+
+# 定义表格属性
+def set_style(name, height, bold=False):
+    style = xlwt.XFStyle()  # 初始化样式
+    font = xlwt.Font()  # 为样式创建字体
+    font.name = name
+    font.bold = bold
+    font.color_index = 4
+    font.height = height
+    style.font = font
+    return style
+
+
+# 初始化测试结果表
+# case_num 测试数据list
+def write_excel():
+    global l
+    # 创建工作簿
+    try:
+        workbook = xlwt.Workbook(encoding='utf-8')
+        # 创建sheet
+        data_sheet = workbook.add_sheet('测试结果')
+    except Exception as e:
+        exception_handling(e)
+        raise Custom_exception.InitResultError
+    title = ['用例ID', '所属模块', '测试点', '用例描述', '重要程度', '预期结果', '实际结果', '错误日志', '错误截图']
+    try:
+        for i in range(len(title)):
+            data_sheet.write(0, i, title[i])
+        for j in range(len(l)):
+            for index in range(len(l[j])):
+                if l[j][6] is None and index == 6:
+                    data_sheet.write(j+1, 6, 'success')
+                    continue
+                data_sheet.write(j+1, index, l[j][index])
+    except Exception as e:
+        exception_handling(e)
+        raise Custom_exception.WriteResultError
+    try:
+        # 保存文件
+        workbook.save(Path.father_path+u'\\测试结果.xls')
+    except Exception as e:
+        exception_handling(e)
+        raise Custom_exception.SaveReusltError
+
+
+def test_result_list():
+    global l
+    return l

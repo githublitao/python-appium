@@ -6,12 +6,18 @@ Created on 2017年8月22日
 @author: li tao
 """
 import time
-import log
+import datetime
+import creat_case
 try:
     runtime = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
+    start_time = datetime.datetime.now()
 except Exception as e:
-    log.exception_handling(e)
+    creat_case.exception_handling(e)
 
 
 def test_start_time():
     return runtime
+
+
+def start_time_test():
+    return start_time

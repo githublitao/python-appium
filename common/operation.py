@@ -6,7 +6,6 @@ Created on 2017年8月24日
 @author: li tao
 """
 import logging
-
 import Element
 import Global
 from case import Get_Driver
@@ -76,11 +75,11 @@ class Opera:
         self.swipe_to_right()
 
 #   截图
-    def screen(self, path, name, time):
+    def screen(self, name, path):
         try:
-            self.D.get_screen(path+'\\'+name+time+'.png')
+            self.D.get_screen(name)
             logging.info('错误截图已保存在 ' + path)
         except Exception as e:
-            logging.error('截图失败：%s ' %e)
+            logging.error('截图失败：%s ' % e)
 
 

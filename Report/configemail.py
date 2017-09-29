@@ -6,8 +6,7 @@ Created on 2017年8月22日
 @author: li tao
 """
 import configparser
-import logging
-from common import Path, log
+from common import Path, log, creat_case
 from Exception import Custom_exception
 
 
@@ -29,7 +28,7 @@ class ConfigEmail:
             # 授权码
             self.AuthorizationCode = config['email_address']['AuthorizationCode']
         except Exception as e:
-            log.exception_handling(e, "邮件信息初始化")
+            creat_case.exception_handling(e, "邮件信息初始化")
             raise Custom_exception.MailInitializationError
 
     def get_sender(self):

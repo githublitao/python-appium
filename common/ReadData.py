@@ -9,36 +9,81 @@ import xlrd
 import logging
 import re
 from Exception import Custom_exception
-import log, Path
+import log
+import Path
+import creat_case
+case = []
 
 
-class Excel:
-
-    def __init__(self, fp):
+class ReadCaseExcel:
+    # fp 测试用例路径
+    def __init__(self):
+        global case
         try:
-            self.data = xlrd.open_workbook(fp)
-        except Exception, e:
-            logging.error("%s" % e)
+            self.data = xlrd.open_workbook(Path.scan_files(postfix='case.xls'))
+            case = self.data.sheet_by_name(u'测试用例')
+            self.case_num = case.nrows                         # 测试用例行数
+        except Exception as e:
+            creat_case.exception_handling(e)
+            raise Custom_exception.OpenXlsError
+
+    # 构建测试结果表
+    # fist 开始用例编号
+    # end 结束用例编号
+    @staticmethod
+    def result_list(first, end):
+        global case
+        results = []
+        for case_id in range(first, end):
+            single_results = []
+            number = int(case.row(case_id)[0].value)
+            mod_ule = case.row(case_id)[1].value.encode('utf8')
+            test_point = case.row(case_id)[2].value.encode('utf8')
+            test_name = case.row(case_id)[4].value.encode('utf8')
+            degree_of_importance = case.row(case_id)[5].value.encode('utf8')
+            expected_result = case.row(case_id)[6].value.encode('utf8')
+            single_results.append(number)
+            single_results.append(mod_ule)
+            single_results.append(test_point)
+            single_results.append(test_name)
+            single_results.append(degree_of_importance)
+            single_results.append(expected_result)
+            results.append(single_results)
+        return results
+
+    # 用例条数
+    def case_num(self):
+        return self.case_num
+
+
+class ReadStepExcel:
+    # fp 测试步骤表路径
+    # case 测试用例数据列表
+    def __init__(self):
+        global case
         try:
-            self.case = self.data.sheet_by_name(u'测试用例')
-            self.case_num = self.case.nrows                         # 测试用例行数
+            self.data = xlrd.open_workbook(Path.scan_files(postfix='step.xls'))
             self.procedure = self.data.sheet_by_name(u'测试步骤')
             self.procedure_num = self.procedure.nrows               # 测试步骤行数
+            self.case = case
         except Exception as e:
-            log.exception_handling(e)
+            creat_case.exception_handling(e)
             raise Custom_exception.OpenXlsError
 
 #   根据传入的测试用例case_id，获得该case的操作步骤
+#   case_id 测试用例编号
     def get_case_desc(self, case_id):
         # pattern = re.compile(ur'[1-9]\d*')       # 正则用于匹配数字
         # pattern1 = re.compile("'(.*?)'")         # 正则用于匹配字符串
         test_procedure = []                     # 用例操作步骤列表
+        index = int(self.case.row(case_id)[0].value)
         # 用例标题
         test_title = self.case.row(case_id)[4].value.encode("utf8")
         # test_title = pattern1.findall(str(self.case.row(case_id)[4]).decode("unicode_escape").encode("utf8"))[0]
         #  用例方法名称
         test_name = self.case.row(case_id)[3].value.encode("utf8")
         # test_name = pattern1.findall(str(self.case.row(case_id)[3]).decode("unicode_escape").encode("utf8"))[0]
+        test_procedure.append(index)
         test_procedure.append(test_title)
         test_procedure.append(test_name)
         for i in range(1, self.procedure_num):
@@ -73,7 +118,7 @@ class Excel:
                 for index in range(1, count):
                     key = test_procedure[index][0]
                     j = index - 1
-                    while j >= 0:
+                    while j >= 3:
                         if test_procedure[j][0] >= key:
                             mobile_list = test_procedure[j + 1]
                             test_procedure[j + 1] = test_procedure[j]
@@ -81,27 +126,3 @@ class Excel:
                             test_procedure[j] = mobile_list
                         j -= 1
         return test_procedure    # 单用例执行步骤
-
-    # 构建测试结果表
-    def result_list(self, fist, end):
-        results = []
-        for case_id in range(fist, end):
-            single_results = []
-            number = int(self.case.row(case_id)[0].value)
-            mod_ule = self.case.row(case_id)[1].value.encode('utf8')
-            test_point = self.case.row(case_id)[2].value.encode('utf8')
-            test_name = self.case.row(case_id)[4].value.encode('utf8')
-            degree_of_importance = self.case.row(case_id)[5].value.encode('utf8')
-            expected_result = self.case.row(case_id)[6].value.encode('utf8')
-            single_results.append(number)
-            single_results.append(mod_ule)
-            single_results.append(test_point)
-            single_results.append(test_name)
-            single_results.append(degree_of_importance)
-            single_results.append(expected_result)
-            results.append(single_results)
-        return results
-
-    # 用例条数
-    def case_num(self):
-        return self.case_num

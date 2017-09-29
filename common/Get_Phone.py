@@ -7,12 +7,9 @@ Created on 2017年8月21日
 """
 import configparser
 import Path
-import subprocess
-import re
-import logging
 import log
-import logging
 from Exception import Custom_exception
+import creat_case
 
 
 # def connect_dvs():
@@ -68,7 +65,7 @@ class Phone:
             self.Phone_Model = config['Phone']['Phone_Model']
             self.System_Version = config['Phone']['System_Version']
         except Exception as e:
-            log.exception_handling(e)
+            creat_case.exception_handling(e)
             raise Custom_exception.ReadDeviceError
 
     def model(self):

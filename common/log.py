@@ -8,34 +8,30 @@ Created on 2017年8月24日
 import logging
 import Path
 import logging.config
-import mkdir_log_directory
 import runtime
 from Exception import Custom_exception
+import codecs
 
 
 def log_config():
     try:
         logger = logging.getLogger()
         logger.setLevel(logging.DEBUG)  # Log等级总开关
-
         # 第二步，创建一个handler，用于写入日志文件
         logfile = Path.log_path()+runtime.test_start_time()+'.log'
         fh = logging.FileHandler(logfile, mode='w+')
         fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关
-
         # 第三步，再创建一个handler，用于输出到控制台
         ch = logging.StreamHandler()
         ch.setLevel(logging.DEBUG)  # 输出到console的log等级的开关
-
         # 第四步，定义handler的输出格式
         formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
         fh.setFormatter(formatter)
         ch.setFormatter(formatter)
-
         # 第五步，将logger添加到handler里面
         logger.addHandler(fh)
         logger.addHandler(ch)
-        logging.info('测试开始时间：%s' %runtime.test_start_time())
+        logging.info('测试开始时间：%s' %runtime. test_start_time())
         # logging.basicConfig(level=logging.DEBUG,
         #                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
         #                     datefmt='%a, %d %b %Y %H:%M:%S',
@@ -59,27 +55,26 @@ def log_config():
 # file 运行日志存放路径
 # path 错误日志存放路径
 # test_name  日志记录开始位标志
-def error_log(file, path, test_name=None):
+def error_log(fp, path, test_name=None):
     try:
-        f = open(file)
+        f = open(fp)
         data = f.readlines()
         num = len(data)
         r = open(path, 'w+')
-        r.writelines('<?xml version="1.0" encoding="UTF-8"?>')
+        r.writelines('<?xml version="1.0" encoding="UTF-8"?>\n')
         for i in range(0, len(data) - 1):
             if test_name in data[i]:
                 for j in range(i, num - 2):
                     r.writelines(data[j])
-                r.close()
-            else:
+            if test_name is None:
                 if num <= 50:
                     for j in range(0, num-1):
                         r.writelines(data[j])
-                    r.close()
                 else:
                     for j in range(num-50, num-1):
                         r.writelines(data[j])
-                    r.close()
+        r.close()
+        f.close()
         logging.info('记录错误日志')
     except Exception as e:
         logging.error(e)
@@ -96,19 +91,4 @@ def deco(arg):
     return _deco
 
 
-# 错误处理
-# e 报错内容
-# method_name
-def exception_handling(e, test_name=None, method_name=None, op=None):
-    logging.error(e)
-    path = Path.log_path() + runtime.test_start_time() + '_error'
-    mkdir_log_directory.mk_dir(path)                # 创建错误日志目录
-    if op:
-        op.screen(path, method_name, runtime.test_start_time())         # 截图
-    path1 = Path.log_path() + runtime.test_start_time() + '.log'
-    if test_name:
-        log_error = path + '\\' + test_name + '.log'    # 记录错误日志文件
-        error_log(path1, log_error, test_name)
-    else:
-        log_error = path + '\\' + 'error.log'    # 记录错误日志文件
-        error_log(path1, log_error)
+

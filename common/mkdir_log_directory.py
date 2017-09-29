@@ -7,7 +7,7 @@ Created on 2017年8月28日
 """
 import os
 import logging
-import log
+import creat_case
 
 
 def mk_dir(path):
@@ -29,7 +29,7 @@ def mk_dir(path):
             os.makedirs(path)
             logging.info(path+'目录创建成功')
         except Exception as e:
-            log.exception_handling('目录创建失败: %s' %e)
+            creat_case.exception_handling('目录创建失败: %s' %e)
     else:
         # 如果目录存在则不创建，并提示目录已存在
         pass

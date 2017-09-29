@@ -51,3 +51,18 @@ class ReadDeviceError(Exception):
 class LogConfigError(Exception):
     def __init__(self, err='日志配置初始化错误'):
         Exception.__init__(self, err)
+
+
+class InitResultError(Exception):
+    def __init__(self, err='初始化测试结果表失败'):
+        Exception.__init__(self, err)
+
+
+class WriteResultError(Exception):
+    def __init__(self, err='写入测试结果失败'):
+        Exception.__init__(self, err)
+
+
+class SaveReusltError(Exception):
+    def __init__(self, err='保存测试结果失败'):
+        Exception.__init__(self, err)

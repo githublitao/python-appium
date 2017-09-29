@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Exception import Custom_exception
-import log
+import creat_case
 
 
 class Element:
@@ -72,7 +72,7 @@ class Element:
             element = self.driver.quit()
             return element
         except Exception as e:
-            log.exception_handling(e)
+            creat_case.exception_handling(e)
 
     # 截图
     # path  截图存放位置路径

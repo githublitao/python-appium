@@ -9,7 +9,7 @@ import os
 from appium import webdriver
 from common.Get_Phone import Phone, Path
 from common import log
-import logging
+from common import creat_case
 from Exception import Custom_exception
 PATH=lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
 Phone = Phone()
@@ -32,7 +32,7 @@ class Driver:
 #           如果设置的是app在电脑上的路径，则不需要配appPackage和appActivity，同理反之
             self.driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_caps)
         except Exception as e:
-            log.exception_handling(e)
+            creat_case.exception_handling(e)
             raise Custom_exception.GetDriverError
 
     def get_driver(self):
