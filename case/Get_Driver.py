@@ -7,12 +7,12 @@ Created on 2017年8月21日
 """
 import os
 from appium import webdriver
-from common.Get_Phone import Phone, Path
+from common import Get_Phone
+from common import Path
 from common import log
 from common import creat_case
 from Exception import Custom_exception
 PATH=lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
-Phone = Phone()
 #   初始化driver
 
 
@@ -22,8 +22,8 @@ class Driver:
         try:
             desired_caps = {}
             desired_caps['platformName'] = 'Android'
-            desired_caps['platformVersion'] = Phone.version()       # 设备版本
-            desired_caps['deviceName'] = Phone.model()          # 设备名称
+            desired_caps['platformVersion'] = Get_Phone.get_android_version()     # 设备版本
+            desired_caps['deviceName'] = Get_Phone.get_device_name()        # 设备名称
             desired_caps['app'] = PATH(Path.scan_files(postfix='.apk'))     # 待测应用
 #           desired_caps['appPackage'] = 'com.sixty.nidoneClient'
 #           desired_caps['appActivity'] = 'com.sixty.nidoneClient.view.activity.SDK_WebApp'

@@ -27,9 +27,8 @@ def mk_dir(path):
             # 如果不存在则创建目录
             # 创建目录操作函数
             os.makedirs(path)
-            logging.info(path+'目录创建成功')
         except Exception as e:
-            creat_case.exception_handling('目录创建失败: %s' %e)
+            print e
     else:
         # 如果目录存在则不创建，并提示目录已存在
         pass

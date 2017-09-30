@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+2017-09-30 14:01:52,079 - log.py[line:88] - INFO:   start 正确登录.
+2017-09-30 14:01:52,079 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/ec2a7757-b462-4839-99eb-1f2d658d37f3/context {"sessionId": "ec2a7757-b462-4839-99eb-1f2d658d37f3", "name": "WEBVIEW"}
+2017-09-30 14:01:52,144 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 14:01:52,144 - creat_case.py[line:116] - ERROR: Message: No such context found.
+
+2017-09-30 14:01:52,144 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/ec2a7757-b462-4839-99eb-1f2d658d37f3/screenshot {"sessionId": "ec2a7757-b462-4839-99eb-1f2d658d37f3"}

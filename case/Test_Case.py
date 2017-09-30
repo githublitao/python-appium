@@ -5,6 +5,7 @@ import time
 from common import log
 from common import operation
 from common import creat_case
+import TouchAction
 # 测试用例
 
 

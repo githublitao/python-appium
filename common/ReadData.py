@@ -6,10 +6,7 @@ Created on 2017年5月5日
 """
 #   读取测试用例
 import xlrd
-import logging
-import re
 from Exception import Custom_exception
-import log
 import Path
 import creat_case
 case = []

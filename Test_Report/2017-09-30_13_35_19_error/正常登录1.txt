@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+2017-09-30 13:35:56,450 - log.py[line:88] - INFO:   run 正常登录1.
+2017-09-30 13:35:56,450 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30/element {"using": "xpath", "sessionId": "3393d7ab-015e-414c-a562-1d054b892f30", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+2017-09-30 13:36:00,444 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 13:36:00,444 - creat_case.py[line:116] - ERROR: Message: An element could not be located on the page using the given search parameters.
+
+2017-09-30 13:36:00,446 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30/screenshot {"sessionId": "3393d7ab-015e-414c-a562-1d054b892f30"}
+2017-09-30 13:36:02,684 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 13:36:02,690 - operation.py[line:81] - INFO: 错误截图已保存在 H:\project\python_appium\Test_Report\2017-09-30_13_35_19_error
+[debug] Setting language to default
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 push "C:\\Users\\SIMO\\AppData\\Local\\Temp\\com.sixty.nidoneClient\\strings.json" /data/local/tmp
+[36minfo[39m: [debug] Checking whether aapt is present
+[36minfo[39m: [debug] Using aapt from F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe
+[36minfo[39m: [debug] Retrieving process from manifest.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe dump xmltree H:\project\python_appium\app-client-debug.apk AndroidManifest.xml
+[36minfo[39m: [debug] Set app process to: com.sixty.nidoneClient
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Checking app cert for H:\project\python_appium\app-client-debug.apk.
+[36minfo[39m: [debug] executing cmd: java -jar F:\test_tools\Appium\node_modules\appium\node_modules\appium-adb\jars\verify.jar H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] App already signed.
+[36minfo[39m: [debug] Zip-aligning H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] Checking whether zipalign is present
+[36minfo[39m: [debug] Using zipalign from F:\测试工具安装包\sdk\build-tools\android-4.4W\zipalign.exe
+[36minfo[39m: [debug] Zip-aligning apk.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\zipalign.exe -f 4 H:\project\python_appium\app-client-debug.apk C:\Users\SIMO\AppData\Local\Temp\117830-3204-oxhqtf.vlrcp1ra4i\appium.tmp
+[36minfo[39m: [debug] MD5 for app is 85b42dada3ddf5ccfe399142ccc6d8c9
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ls /data/local/tmp/85b42dada3ddf5ccfe399142ccc6d8c9.apk"
+[36minfo[39m: [debug] Getting install status for com.sixty.nidoneClient
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "pm list packages -3 com.sixty.nidoneClient"
+[36minfo[39m: [debug] App is installed
+[36minfo[39m: App is already installed, resetting app
+[36minfo[39m: [debug] Running fast reset (stop and clear)
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "am force-stop com.sixty.nidoneClient"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "pm clear com.sixty.nidoneClient"
+[36minfo[39m: [debug] Forwarding system:9517 to device:4724
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 forward tcp:9517 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 push "F:\\test_tools\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Enabling Unicode keyboard support
+[36minfo[39m: [debug] Pushing unicode ime to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "settings get secure default_input_method"
+[36minfo[39m: [debug] Unsetting IME 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ime enable io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.sixty.nidoneClient -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] tcp port:4724[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] json loading complete.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "dumpsys window"
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"\/data\/local\/tmp","status":0}
+[36minfo[39m: [debug] dataDir set to: /data/local/tmp
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":false,"status":0}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.sixty.nidoneClient/com.sixty.nidoneClient.view.activity.SDK_WebApp"
+[36minfo[39m: [debug] Waiting for pkg "com.sixty.nidoneClient" and activity "com.sixty.nidoneClient.view.activity.SDK_WebApp" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 4.4.4
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to the default of 600 secs
+[36minfo[39m: [debug] Appium session started with sessionId c8374ccb-ae86-4c65-ba9c-f21584f58cea
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 18032.179 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"R7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":"4.4","platformName":"Android"},"deviceName":"EAROU8VOSKAM99I7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformName":"Android"},"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea [39m[32m200[39m[90m 2.463 ms - 655[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"R7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":"4.4","platformName":"Android"},"deviceName":"EAROU8VOSKAM99I7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformName":"Android"},"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea/context[39m [90m{"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea","name":"WEBVIEW"}[39m
+[36minfo[39m: [debug] Getting a list of available webviews
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "cat /proc/net/unix"
+[36minfo[39m: [debug] Available contexts: 
+[36minfo[39m: [debug] []
+[36minfo[39m: [debug] Available contexts: NATIVE_APP
+[36minfo[39m: [debug] Responding to client with error: {"status":35,"value":{"message":"No such context found.","origValue":"Context 'WEBVIEW_com.sixty.nidoneClient' does not exist"},"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea/context [39m[31m500[39m[90m 58.848 ms - 179[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 pull /data/local/tmp/screenshot.png "C:\\Users\\SIMO\\AppData\\Local\\Temp\\appium117830-3204-q06qz8.g7a7sw0zfr.png"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmYlXXd+PHPbOwM2wAqoCAPpIFsGkqJCwrhAu7Wcz3apaWWJSqY5A5IuaaPIlaSmOmlaFoqGgmWgVrE4g6yCC5PQi6M7DgwDPP7wx8T4ywwMNvXXq/r4rpmzjn3fX+PDoc57/O9v3dGRBQHAAAAQMIy63oAAAAAAHtK4AAAAACSJ3AAAAAAyRM4AAAAgOQJHAAAAEDyBA4AAAAgeQIHAAAAkDyBAwAAAEiewAEAAAAkT+AAAAAAkidwAAAAAMkTOAAAAIDkCRwAAABA8gQOAAAAIHkCBwAAAJA8gQMAAABInsBBvdC/f/848sgj63oYAAAAJCq7rgcAubm5ceWVV0Z2dna8+eab8emnn9b1kAAAAEhMvQ8cnTt3jtGjR0eXLl2qdb8rV66MW265JZYsWVKt+6XqRo0aFW3bto2IiMsuuyyuueaaKC4uruNRfS47Ozu2bt1ao8fIzMyMjIyMKCoqqtHjAAAAfJllRET9eCdZji5dusRdd90VLVu2rJH9v/POO/Gd73ynRva9O/Ly8qJXr17RtWvX6Ny5c7Rt2zbatWsXDRs2jMaNG0dxcXEUFBREQUFB5Ofnx6pVq+Ltt9+Ot99+O5YtWxYrV66s66dQZcccc0yMGzeu1G3jx4+P6dOn19GI/u20006Liy66KDZs2BDXXXddvPrqq9V+jCOOOCKuuuqqyMjIiJ///Ofx3HPPVfsxAAAA/hPU28DRuXPnmDBhQrRu3brGjlFcXBwDBw6ssf3vih49esRRRx0Vhx9+eHTs2DEiIjIyMqq0j+2zHVavXh1z5syJF198MWbPnh2FhYXVPt7qlJeXFw888EDk5uaWun39+vVx9tlnx6pVq+poZBGNGzeOadOmRU5OTkREfPjhh3HWWWdFQUFBtR2jZcuWMWXKlGjevHlERKxd...","sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea/screenshot [39m[32m200[39m[90m 1160.932 ms - 28798[39m [90m{"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmYlXXd+PHPbOwM2wAqoCAPpIFsGkqJCwrhAu7Wcz3apaWWJSqY5A5IuaaPIlaSmOmlaFoqGgmWgVrE4g6yCC5PQi6M7DgwDPP7wx8T4ywwMNvXXq/r4rpmzjn3fX+PDoc57/O9v3dGRBQHAAAAQMIy63oAAAAAAHtK4AAAAACSJ3AAAAAAyRM4AAAAgOQJHAAAAEDyBA4AAAAgeQIHAAAAkDyBAwAAAEiewAEAAAAkT+AAAAAAkidwAAAAAMkTOAAAAIDkCRwAAABA8gQOAAAAIHkCBwAAAJA8gQMAAABInsBBvdC/f/848sgj63oYAAAAJCq7rgcAubm5ceWVV0Z2dna8+eab8emnn9b1kAAAAEhMvQ8cnTt3jtGjR0eXLl2qdb8rV66MW265JZYsWVKt+6XqRo0aFW3bto2IiMsuuyyuueaaKC4uruNRfS47Ozu2bt1ao8fIzMyMjIyMKCoqqtHjAAAAfJllRET9eCdZji5dusRdd90VLVu2rJH9v/POO/Gd73ynRva9O/Ly8qJXr17RtWvX6Ny5c7Rt2zbatWsXDRs2jMaNG0dxcXEUFBREQUFB5Ofnx6pVq+Ltt9+Ot99+O5YtWxYrV66s66dQZcccc0yMGzeu1G3jx4+P6dOn19GI/u20006Liy66KDZs2BDXXXddvPrqq9V+jCOOOCKuuuqqyMjIiJ///Ofx3HPPVfsxAAAA/hPU28DRuXPnmDBhQrRu3brGjlFcXBwDBw6ssf3vih49esRRRx0Vhx9+eHTs2DEiIjIyMqq0j+2zHVavXh1z5syJF198MWbPnh2FhYXVPt7qlJeXFw888EDk5uaWun39+vVx9tlnx6pVq+poZBGNGzeOadOmRU5OTkREfPjhh3HWWWdFQUFBtR2jZcuWMWXKlGjevHlERKxd...","sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}[39m
+[36minfo[39m: [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea[39m [90m{}[39m
+[36minfo[39m: Shutting down appium session
+[36minfo[39m: [debug] Pressing the HOME button
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "input keyevent 3"
+[36minfo[39m: [debug] Resetting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Stopping logcat capture
+[36minfo[39m: [debug] Logcat terminated with code null, signal SIGTERM
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"OK, shutting down","status":0}
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [CDS]close[4724][39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] close [socket][/0.0.0.0:4724][39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Closed client connection
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0[39m
+[36minfo[39m: [debug] Sent shutdown command, waiting for UiAutomator to stop...
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Time: 4.213[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] OK (1 test)[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1[39m
+[36minfo[39m: [debug] UiAutomator shut down normally
+[36minfo[39m: [debug] Cleaning up android objects
+[36minfo[39m: [debug] Cleaning up appium session
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}
+[36minfo[39m: [37m<-- DELETE /wd/hub/session/c8374ccb-ae86-4c65-ba9c-f21584f58cea [39m[32m200[39m[90m 1590.886 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"c8374ccb-ae86-4c65-ba9c-f21584f58cea"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"capabilities":{"alwaysMatch":{"platformName":"Android"},"firstMatch":[{}]},"desiredCapabilities":{"deviceName":"R7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":"4.4","platformName":"Android"}}[39m
+[36minfo[39m: Client User-Agent string: Python http auth
+[36minfo[39m: [debug] No appActivity desired capability or server param. Parsing from apk.
+[36minfo[39m: [debug] No appPackage desired capability or server param. Parsing from apk.
+[36minfo[39m: [debug] Using local app from desired caps: H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] Creating new appium session 3393d7ab-015e-414c-a562-1d054b892f30
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_101
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from F:\测试工具安装包\sdk\platform-tools\adb.exe
+[36minfo[39m: [debug] Parsing package and activity from app manifest
+[36minfo[39m: [debug] Checking whether aapt is present
+[36minfo[39m: [debug] Using aapt from F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe
+[36minfo[39m: [debug] Extracting package and launch activity from manifest.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe dump badging H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] badging package: com.sixty.nidoneClient
+[36minfo[39m: [debug] badging act: com.sixty.nidoneClient.view.activity.SDK_WebApp
+[36minfo[39m: [debug] Parsed package and activity are: com.sixty.nidoneClient/com.sixty.nidoneClient.view.activity.SDK_WebApp
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Checking whether app is actually present
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 1 device(s) connected
+[36minfo[39m: Found device EAROU8VOSKAM99I7
+[36minfo[39m: [debug] Setting device id to EAROU8VOSKAM99I7
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 wait-for-device
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: Device API level is: 19
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop persist.sys.language"
+[36minfo[39m: [debug] Current device persist.sys.language: 
+[36minfo[39m: [debug] java -jar "F:\test_tools\Appium\node_modules\appium\node_modules\appium-adb\jars\appium_apk_tools.jar" "stringsFromApk" "H:\project\python_appium\app-client-debug.apk" "C:\Users\SIMO\AppData\Local\Temp\com.sixty.nidoneClient" 
+[36minfo[39m: [debug] Reading strings from converted strings.json
+[36minfo[39m: [debug] Setting language to default
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 push "C:\\Users\\SIMO\\AppData\\Local\\Temp\\com.sixty.nidoneClient\\strings.json" /data/local/tmp
+[36minfo[39m: [debug] Checking whether aapt is present
+[36minfo[39m: [debug] Using aapt from F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe
+[36minfo[39m: [debug] Retrieving process from manifest.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe dump xmltree H:\project\python_appium\app-client-debug.apk AndroidManifest.xml
+[36minfo[39m: [debug] Set app process to: com.sixty.nidoneClient
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Checking app cert for H:\project\python_appium\app-client-debug.apk.
+[36minfo[39m: [debug] executing cmd: java -jar F:\test_tools\Appium\node_modules\appium\node_modules\appium-adb\jars\verify.jar H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] App already signed.
+[36minfo[39m: [debug] Zip-aligning H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] Checking whether zipalign is present
+[36minfo[39m: [debug] Using zipalign from F:\测试工具安装包\sdk\build-tools\android-4.4W\zipalign.exe
+[36minfo[39m: [debug] Zip-aligning apk.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\zipalign.exe -f 4 H:\project\python_appium\app-client-debug.apk C:\Users\SIMO\AppData\Local\Temp\117830-3204-vg4hdm.1uj21q0k9\appium.tmp
+[36minfo[39m: [debug] MD5 for app is 85b42dada3ddf5ccfe399142ccc6d8c9
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ls /data/local/tmp/85b42dada3ddf5ccfe399142ccc6d8c9.apk"
+[36minfo[39m: [debug] Getting install status for com.sixty.nidoneClient
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "pm list packages -3 com.sixty.nidoneClient"
+[36minfo[39m: [debug] App is installed
+[36minfo[39m: App is already installed, resetting app
+[36minfo[39m: [debug] Running fast reset (stop and clear)
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "am force-stop com.sixty.nidoneClient"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "pm clear com.sixty.nidoneClient"
+[36minfo[39m: [debug] Forwarding system:9517 to device:4724
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 forward tcp:9517 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 push "F:\\test_tools\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Enabling Unicode keyboard support
+[36minfo[39m: [debug] Pushing unicode ime to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "settings get secure default_input_method"
+[36minfo[39m: [debug] Unsetting IME 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ime enable io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 install "F:\test_tools\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.sixty.nidoneClient -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] tcp port:4724[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] json loading complete.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "dumpsys window"
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"\/data\/local\/tmp","status":0}
+[36minfo[39m: [debug] dataDir set to: /data/local/tmp
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":false,"status":0}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.sixty.nidoneClient/com.sixty.nidoneClient.view.activity.SDK_WebApp"
+[36minfo[39m: [debug] Waiting for pkg "com.sixty.nidoneClient" and activity "com.sixty.nidoneClient.view.activity.SDK_WebApp" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 4.4.4
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to the default of 600 secs
+[36minfo[39m: [debug] Appium session started with sessionId 3393d7ab-015e-414c-a562-1d054b892f30
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 12065.079 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"R7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":"4.4","platformName":"Android"},"deviceName":"EAROU8VOSKAM99I7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformName":"Android"},"sessionId":"3393d7ab-015e-414c-a562-1d054b892f30"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30 [39m[32m200[39m[90m 1.652 ms - 655[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"R7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":"4.4","platformName":"Android"},"deviceName":"EAROU8VOSKAM99I7","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformName":"Android"},"sessionId":"3393d7ab-015e-414c-a562-1d054b892f30"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30/element[39m [90m{"using":"xpath","sessionId":"3393d7ab-015e-414c-a562-1d054b892f30","value":"//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding //*[@id="loginForm"]/div[1]/div[1]/div[2]/input using XPATH with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"Could not find an element using supplied strategy. ","status":7}
+[36minfo[39m: [debug] Condition unmet after 3990ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"Could not find an element using supplied strategy. "},"sessionId":"3393d7ab-015e-414c-a562-1d054b892f30"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30/element [39m[31m500[39m[90m 3991.998 ms - 230[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/3393d7ab-015e-414c-a562-1d054b892f30/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe -s EAROU8VOSKAM99I7 pull /data/local/tmp/screenshot.png "C:\\Users\\SIMO\\AppData\\Local\\Temp\\appium117830-3204-c9fdn9.19nbivygb9.png"

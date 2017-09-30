@@ -66,3 +66,8 @@ class WriteResultError(Exception):
 class SaveReusltError(Exception):
     def __init__(self, err='保存测试结果失败'):
         Exception.__init__(self, err)
+
+
+class ElementNotExist(Exception):
+    def __init__(self, err='页面元素不存在'):
+        Exception.__init__(self, err)

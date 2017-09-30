@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+2017-09-30 13:56:10,387 - log.py[line:88] - INFO:   run 正常登录1.
+2017-09-30 13:56:10,387 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/27150381-4803-42c2-8e1b-1d4de004512e/element {"using": "xpath", "sessionId": "27150381-4803-42c2-8e1b-1d4de004512e", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+2017-09-30 13:56:14,227 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 13:56:14,229 - creat_case.py[line:116] - ERROR: Message: An element could not be located on the page using the given search parameters.
+
+2017-09-30 13:56:14,229 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/27150381-4803-42c2-8e1b-1d4de004512e/screenshot {"sessionId": "27150381-4803-42c2-8e1b-1d4de004512e"}

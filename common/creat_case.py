@@ -32,7 +32,6 @@ def test_case():
     f.write('#! /usr/bin/python\n')
     f.write('# -*- coding:utf-8 -*-\n')
     f.write('import unittest\n')
-    f.write('import time\n')
     f.write('from common import log\n')
     f.write('from common import operation\n')
     f.write('from common import creat_case\n')
@@ -96,6 +95,15 @@ def test_case():
             # 向右滑动
             elif ob.get_case_desc(i)[j][1] == 'swipe_to_right':
                 f.write('            self.OP.swipe_to_right()\n')
+            # 判断页面内容是否存在
+            elif ob.get_case_desc(i)[j][1] == 'page_element':
+                f.write('            self.OP.judge_key("%s", "%s", "%s")\n'
+                        % (ob.get_case_desc(i)[j][2], ob.get_case_desc(i)[j][3], ob.get_case_desc(i)[j][4]))
+            elif ob.get_case_desc(i)[j][1] == 'set_keys':
+                f.write('            self.OP.set_keys("%s", "%s", "%s")\n'
+                        % (ob.get_case_desc(i)[j][2], ob.get_case_desc(i)[j][3], ob.get_case_desc(i)[j][4]))
+            elif ob.get_case_desc(i)[j][1] == 'shake':
+                f.write('            self.OP.shake()\n')
         f.write('        except Exception as e:\n')
         f.write('            creat_case.exception_handling(e, index=%s, test_name="%s", method_name=self.method_name,'
                 ' op=self.OP)' % (ob.get_case_desc(i)[0], ob.get_case_desc(i)[1]))
@@ -137,54 +145,6 @@ def exception_handling(e, index=None, test_name=None, method_name=None, op=None)
     else:
         log_error = path + '\\' + 'error.txt'  # 记录错误日志文件
         log.error_log(path1, log_error)
-    # if op:
-    #     way = path+'\\'+method_name+runtime.test_start_time()+'.png'
-    #     op.screen(way, path)         # 截图
-    # path1 = Path.log_path() + runtime.test_start_time() + '.log'
-    # if test_name:
-    #     log_error = path + '\\' + test_name + '.log'    # 记录错误日志文件
-    #     error_log(path1, log_error, test_name)
-    # else:
-    #     log_error = path + '\\' + 'error.log'    # 记录错误日志文件
-    #     error_log(path1, log_error)
-    # if 'AssertionError' in e:
-    #     for i in range(0, len(List)):
-    #         if index == List[i][0]:
-    #             List[i].append('fail')
-    #         way = path+'\\'+method_name+runtime.test_start_time()+'.png'
-    #         op.screen(way, path)         # 截图
-    #         List[i].append(way)
-    #         log_error = path + '\\' + test_name + '.log'  # 记录错误日志文件
-    #         error_log(path1, log_error, test_name)
-    #         List[i].append(log_error)
-    # else:
-    #     for i in range(0, len(List)):
-    #         if index == List[i][0]:
-    #             List[i].append('error')
-
-# import xlrd
-# from xlutils.copy import copy
-
-
-# class Excel:
-#
-#     def __init__(self, fp):
-#         try:
-#             self.data = xlrd.open_workbook(fp)
-#             self.wb = copy(self.data)
-#             self.ws = self.wb.get_sheet(0)
-#         except Exception, e:
-#             print str(e)
-#
-#     def result_list(self, case_id, result, png):
-#         wb = copy(self.data)
-#         ws = wb.get_sheet(0)
-#         for i in range(0, length):
-#             print i
-#             extent = len(case_num[i])
-#             for j in range(0, extent):
-#                 ws.write(i+1, j, case_num[i][j])
-#         wb.save(Path.father_path+u'\\测试结果.xls')
 
 
 # 定义表格属性

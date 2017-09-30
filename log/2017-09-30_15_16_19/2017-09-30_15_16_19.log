@@ -1,0 +1,27 @@
+2017-09-30 15:16:20,052 - log.py[line:34] - INFO: 测试开始时间：2017-09-30_15_16_19
+2017-09-30 15:16:20,052 - server.py[line:18] - INFO: start /b taskkill /F /IM node.exe
+2017-09-30 15:16:20,142 - server.py[line:20] - INFO: 启动appium服务
+2017-09-30 15:16:20,142 - server.py[line:24] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-09-30 15:16:20,173 - server.py[line:28] - INFO: http://localhost:4723/wd/hub/
+2017-09-30 15:16:20,178 - connectionpool.py[line:208] - DEBUG: Starting new HTTP connection (1): 127.0.0.1
+2017-09-30 15:16:22,186 - connectionpool.py[line:396] - DEBUG: http://127.0.0.1:8888 "GET http://localhost:4723/wd/hub/ HTTP/1.1" 502 None
+2017-09-30 15:16:22,187 - server.py[line:31] - INFO: appium服务启动成！！
+2017-09-30 15:16:22,187 - log.py[line:88] - INFO:   start 初始化用例脚本.
+2017-09-30 15:16:38,071 - log.py[line:90] - INFO:   初始化用例脚本 success.
+2017-09-30 15:16:38,117 - log.py[line:88] - INFO:   start 初始化driver.
+2017-09-30 15:16:40,272 - remote_connection.py[line:222] - INFO: Could not get IP address for host: localhost
+2017-09-30 15:16:40,272 - remote_connection.py[line:478] - DEBUG: POST http://localhost:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "R7", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "4.4", "platformName": "Android"}}
+2017-09-30 15:16:42,279 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:16:42,279 - creat_case.py[line:116] - ERROR: Message: [Fiddler] The connection to 'localhost' failed. <br />Error: ConnectionRefused (0x274d). <br />System.Net.Sockets.SocketException 由于目标计算机积极拒绝，无法连接。 127.0.0.1:4723
+
+2017-09-30 15:16:42,280 - log.py[line:81] - ERROR: 'in <string>' requires string as left operand, not NoneType
+2017-09-30 15:16:42,282 - log.py[line:88] - INFO:   start 初始化driver.
+2017-09-30 15:16:44,434 - remote_connection.py[line:222] - INFO: Could not get IP address for host: localhost
+2017-09-30 15:16:44,434 - remote_connection.py[line:478] - DEBUG: POST http://localhost:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "R7", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "4.4", "platformName": "Android"}}
+2017-09-30 15:16:46,444 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:16:46,446 - creat_case.py[line:116] - ERROR: Message: [Fiddler] The connection to 'localhost' failed. <br />Error: ConnectionRefused (0x274d). <br />System.Net.Sockets.SocketException 由于目标计算机积极拒绝，无法连接。 127.0.0.1:4723
+
+2017-09-30 15:16:46,451 - log.py[line:81] - ERROR: 'in <string>' requires string as left operand, not NoneType
+2017-09-30 15:16:46,453 - server.py[line:37] - INFO: 关闭appium服务
+2017-09-30 15:16:46,453 - server.py[line:40] - INFO: start /b taskkill /F /IM node.exe
+2017-09-30 15:16:46,480 - server.py[line:42] - INFO: 关闭appium服务成功！！！

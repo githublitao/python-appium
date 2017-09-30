@@ -9,6 +9,7 @@ import logging
 import Element
 import Global
 from case import Get_Driver
+from Exception import Custom_exception
 
 
 class Opera:
@@ -24,9 +25,13 @@ class Opera:
     def clicks(self, page_name, locator):
         self.D.get(self.p.get_type(page_name, locator)).click()
 
-#   输入文本
+#   调用输入法输入文本
     def send_keys(self, page_name, locator, text):
         self.D.get(self.p.get_type(page_name, locator)).send_keys(text)
+
+#   直接对目标元素设置文本
+    def set_keys(self, page_name, locator, text):
+        self.D.get(self.p.get_type(page_name, locator)).set_text(text)
 
 #   获得元素文本
     def get_text(self, page_name, locator):
@@ -72,7 +77,7 @@ class Opera:
 
 #   向右滑动
     def swipe_to_right(self):
-        self.swipe_to_right()
+        self.D.swipe_to_right()
 
 #   截图
     def screen(self, name, path):
@@ -82,4 +87,11 @@ class Opera:
         except Exception as e:
             logging.error('截图失败：%s ' % e)
 
+#   判断页面文本是否存在
+    def judge_key(self, key):
+        if self.D.get_page(key) == -1:
+            raise Custom_exception.ElementNotExist
 
+#   摇一摇手机
+    def shake(self):
+        self.D.friend_shake()

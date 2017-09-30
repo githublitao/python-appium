@@ -1,0 +1,46 @@
+2017-09-30 15:16:56,161 - log.py[line:34] - INFO: 测试开始时间：2017-09-30_15_16_56
+2017-09-30 15:16:56,161 - server.py[line:18] - INFO: start /b taskkill /F /IM node.exe
+2017-09-30 15:16:56,187 - server.py[line:20] - INFO: 启动appium服务
+2017-09-30 15:16:56,187 - server.py[line:24] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-09-30 15:16:56,219 - server.py[line:28] - INFO: http://localhost:4723/wd/hub/
+2017-09-30 15:16:56,223 - connectionpool.py[line:208] - DEBUG: Starting new HTTP connection (1): 127.0.0.1
+2017-09-30 15:16:58,233 - connectionpool.py[line:396] - DEBUG: http://127.0.0.1:8888 "GET http://localhost:4723/wd/hub/ HTTP/1.1" 502 None
+2017-09-30 15:16:58,234 - server.py[line:31] - INFO: appium服务启动成！！
+2017-09-30 15:16:58,234 - log.py[line:88] - INFO:   start 初始化用例脚本.
+2017-09-30 15:17:01,937 - log.py[line:90] - INFO:   初始化用例脚本 success.
+2017-09-30 15:17:01,982 - log.py[line:88] - INFO:   start 初始化driver.
+2017-09-30 15:17:03,145 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "R7", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "4.4", "platformName": "Android"}}
+2017-09-30 15:17:18,052 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:18,052 - log.py[line:90] - INFO:   初始化driver success.
+2017-09-30 15:17:18,055 - log.py[line:88] - INFO:   start 正确登录.
+2017-09-30 15:17:18,055 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/f88143b3-e106-40c2-a083-bba26bcc5728/context {"sessionId": "f88143b3-e106-40c2-a083-bba26bcc5728", "name": "WEBVIEW"}
+2017-09-30 15:17:18,130 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:18,130 - creat_case.py[line:116] - ERROR: Message: No such context found.
+
+2017-09-30 15:17:18,131 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/f88143b3-e106-40c2-a083-bba26bcc5728/screenshot {"sessionId": "f88143b3-e106-40c2-a083-bba26bcc5728"}
+2017-09-30 15:17:19,299 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:19,299 - operation.py[line:81] - INFO: 错误截图已保存在 H:\project\python_appium\Test_Report\2017-09-30_15_16_56_error
+2017-09-30 15:17:19,302 - log.py[line:79] - INFO: 记录错误日志
+2017-09-30 15:17:19,302 - log.py[line:90] - INFO:   正确登录 success.
+2017-09-30 15:17:19,302 - remote_connection.py[line:478] - DEBUG: DELETE http://127.0.0.1:4723/wd/hub/session/f88143b3-e106-40c2-a083-bba26bcc5728 {"sessionId": "f88143b3-e106-40c2-a083-bba26bcc5728"}
+2017-09-30 15:17:20,894 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:20,895 - log.py[line:88] - INFO:   start 初始化driver.
+2017-09-30 15:17:22,020 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "R7", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "4.4", "platformName": "Android"}}
+2017-09-30 15:17:39,023 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:39,023 - log.py[line:90] - INFO:   初始化driver success.
+2017-09-30 15:17:39,026 - log.py[line:88] - INFO:   start 正常登录1.
+2017-09-30 15:17:39,026 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session/88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc/element {"using": "xpath", "sessionId": "88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc", "value": "//*[@id=\"loginForm\"]/div[1]/div[1]/div[2]/input"}
+2017-09-30 15:17:42,963 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:42,963 - creat_case.py[line:116] - ERROR: Message: An element could not be located on the page using the given search parameters.
+
+2017-09-30 15:17:42,963 - remote_connection.py[line:478] - DEBUG: GET http://127.0.0.1:4723/wd/hub/session/88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc/screenshot {"sessionId": "88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc"}
+2017-09-30 15:17:45,207 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:45,213 - operation.py[line:81] - INFO: 错误截图已保存在 H:\project\python_appium\Test_Report\2017-09-30_15_16_56_error
+2017-09-30 15:17:45,213 - log.py[line:79] - INFO: 记录错误日志
+2017-09-30 15:17:45,213 - log.py[line:90] - INFO:   正常登录1 success.
+2017-09-30 15:17:45,213 - remote_connection.py[line:478] - DEBUG: DELETE http://127.0.0.1:4723/wd/hub/session/88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc {"sessionId": "88f6a4ee-59b2-4a34-b3ec-ead1316ba6cc"}
+2017-09-30 15:17:46,819 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-09-30 15:17:46,819 - server.py[line:37] - INFO: 关闭appium服务
+2017-09-30 15:17:46,819 - server.py[line:40] - INFO: start /b taskkill /F /IM node.exe
+2017-09-30 15:17:46,846 - server.py[line:42] - INFO: 关闭appium服务成功！！！
+2017-09-30 15:17:46,848 - del_past_dir.py[line:39] - ERROR: coercing to Unicode: need string or buffer, list found

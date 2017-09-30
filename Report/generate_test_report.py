@@ -85,12 +85,20 @@ def ab(l):
 </head>
 <body>
     <h1 style="text-indent:2em;">nidone6测试报告</h1>
-        <p style="text-indent:4em;">测速开始时间:%s</p>
-        <p style="text-indent:4em;">测试结束时间:%s</p>
-        <p style="text-indent:4em;">测试耗时:%s</p>
-        <p style="text-indent:4em;">Total:%s 
-        Fail:%s
-        Error:%s</p>
+        <p style="text-indent:4em;">测速开始时间:
+                <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span>
+                </p>
+        <p style="text-indent:4em;">测试结束时间:
+                <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span>
+                </p>
+        <p style="text-indent:4em;">测试耗时:
+                <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span>
+                </p>
+        <p style="text-indent:4em;">Total:
+                <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span>
+        Fail:        <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span>
+        Error:
+                <span style="display: inline-block;padding-left: 10px;text-indent: 0em;">%s</span></p>
         <p style="text-indent:4em;">
             <canvas id="canvas_circle" width="500" height="300" style="border:2px solid #0026ff;" >
                 浏览器不支持canvas

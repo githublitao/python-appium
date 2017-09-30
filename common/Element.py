@@ -8,6 +8,7 @@ Created on 2017年8月22日
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from appium.webdriver.common.touch_action import TouchAction
 from Exception import Custom_exception
 import creat_case
 
@@ -24,7 +25,7 @@ class Element:
     # message  单个元素信息列表包含，方式tpye， 超时时间time， 值value
     def get(self, message):
         way, timeout, value = message
-        way_list = ['xpath', 'id', 'ids', 'name', 'classes_name']
+        way_list = ['xpath', 'id', 'ids', 'name', 'classes_name', 'accessibility_id']
         for i in way_list:
             if i == way and i == 'xpath':
                 element = self.driver.find_element_by_xpath(value)
@@ -40,6 +41,9 @@ class Element:
                 return element
             elif i == way and i == 'classes_name':
                 elements = self.driver.find_elements_by_class_name(value)
+                return elements
+            elif i == way and i == 'accessibility_id':
+                elements = self.driver.find_element_by_accessibility_id(value)
                 return elements
             else:
                 raise Custom_exception.WrongLocation
@@ -123,3 +127,11 @@ class Element:
     # 切换至app原生
     def switch_app(self):
         self.driver.witch_to.context("NATIVE_APP")
+
+    # 获取当前页面的树形结构源代码，与uiautomatorviewer截屏所展示出来的结构是相同的，判断是否存在，不存在返回-1
+    def get_page(self, key):
+        return self.driver.page_source.find(key)
+
+    # 摇一摇手机
+    def friend_shake(self):
+        self.driver.shake()

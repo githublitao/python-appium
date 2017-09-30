@@ -35,7 +35,7 @@ def log_config():
         # logging.basicConfig(level=logging.DEBUG,
         #                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
         #                     datefmt='%a, %d %b %Y %H:%M:%S',
-        #                     filename=Path.log_path()+time+'.log',
+        #                     filename=Path.log_path()+runtime.test_start_time()+'.log',
         #                     filemode='w')
     except Exception as e:
         print e
@@ -85,9 +85,9 @@ def error_log(fp, path, test_name=None):
 def deco(arg):
     def _deco(func):
         def __deco(*args, **kwargs):
-            logging.info("  run %s." % arg)
+            logging.info("  start %s." % arg)
             func(*args, **kwargs)
-            logging.info("  %s end." % arg)
+            logging.info("  %s success." % arg)
         return __deco
     return _deco
 
