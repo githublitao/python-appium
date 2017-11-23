@@ -1,0 +1,12 @@
+2017-11-23 17:36:11,663 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_17_36_11
+2017-11-23 17:36:11,663 - server.py[line:19] - INFO: taskkill /F /IM node.exe
+2017-11-23 17:36:11,723 - server.py[line:21] - INFO: 启动appium服务
+2017-11-23 17:36:11,723 - server.py[line:24] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-11-23 17:36:11,763 - server.py[line:28] - INFO: http://localhost:4723/wd/hub/
+2017-11-23 17:36:16,769 - connectionpool.py[line:208] - DEBUG: Starting new HTTP connection (1): 127.0.0.1
+2017-11-23 17:36:17,798 - connectionpool.py[line:396] - DEBUG: http://127.0.0.1:8888 "GET http://localhost:4723/wd/hub/ HTTP/1.1" 404 47
+2017-11-23 17:36:17,798 - server.py[line:37] - ERROR: 启动appium服务失败 exceptions must be old-style classes or derived from BaseException, not NoneType
+2017-11-23 17:36:17,798 - log.py[line:88] - INFO:   start 初始化用例脚本.
+2017-11-23 17:36:20,357 - log.py[line:90] - INFO:   初始化用例脚本 success.
+2017-11-23 17:36:20,665 - log.py[line:88] - INFO:   start 初始化driver.
+2017-11-23 17:36:25,855 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "Connect Fail,Please reconnect Device...", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": null, "platformName": "Android"}}

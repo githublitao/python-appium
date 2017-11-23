@@ -1,0 +1,8 @@
+2017-11-23 17:20:17,492 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_17_20_17
+2017-11-23 17:20:17,492 - server.py[line:18] - INFO: start /b taskkill /F /IM node.exe
+2017-11-23 17:20:17,512 - server.py[line:20] - INFO: 启动appium服务
+2017-11-23 17:20:17,512 - server.py[line:23] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-11-23 17:20:17,532 - server.py[line:27] - INFO: http://localhost:4723/wd/hub/
+2017-11-23 17:20:17,532 - connectionpool.py[line:208] - DEBUG: Starting new HTTP connection (1): localhost
+2017-11-23 17:20:19,556 - server.py[line:34] - ERROR: 启动appium服务失败 HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000056FA400>: Failed to establish a new connection: [Errno 10061] ',))
+2017-11-23 17:20:19,556 - log.py[line:88] - INFO:   start 初始化用例脚本.

@@ -1,0 +1,18 @@
+2017-11-23 16:46:27,644 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_16_46_27
+2017-11-23 16:46:27,644 - log.py[line:88] - INFO:   start 初始化用例脚本.
+2017-11-23 16:46:29,792 - log.py[line:90] - INFO:   初始化用例脚本 success.
+2017-11-23 16:46:29,842 - log.py[line:88] - INFO:   start 初始化driver.
+2017-11-23 16:46:30,898 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "Connect Fail,Please reconnect Device...", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "Connect Fail,Please reconnect Device...", "platformName": "Android"}}
+2017-11-23 16:46:59,066 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-11-23 16:46:59,066 - creat_case.py[line:124] - ERROR: Message: A new session could not be created. (Original error: Could not find a connected Android device.)
+
+2017-11-23 16:46:59,066 - log.py[line:81] - ERROR: 'in <string>' requires string as left operand, not NoneType
+2017-11-23 16:46:59,076 - log.py[line:88] - INFO:   start 初始化driver.
+2017-11-23 16:47:00,138 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": "Connect Fail,Please reconnect Device...", "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": "Connect Fail,Please reconnect Device...", "platformName": "Android"}}
+2017-11-23 16:47:27,801 - remote_connection.py[line:565] - DEBUG: Finished Request
+2017-11-23 16:47:27,801 - creat_case.py[line:124] - ERROR: Message: A new session could not be created. (Original error: Could not find a connected Android device.)
+
+2017-11-23 16:47:27,803 - log.py[line:81] - ERROR: 'in <string>' requires string as left operand, not NoneType
+2017-11-23 16:47:27,805 - server.py[line:38] - INFO: 关闭appium服务
+2017-11-23 16:47:27,805 - server.py[line:41] - INFO: start /b taskkill /F /IM node.exe
+2017-11-23 16:47:27,823 - server.py[line:43] - INFO: 关闭appium服务成功！！！

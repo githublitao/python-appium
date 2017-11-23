@@ -1,0 +1,5 @@
+2017-11-23 17:36:34,236 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_17_36_34
+2017-11-23 17:36:34,236 - server.py[line:19] - INFO: taskkill /F /IM node.exe
+2017-11-23 17:36:34,298 - server.py[line:21] - INFO: 启动appium服务
+2017-11-23 17:36:34,299 - server.py[line:24] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-11-23 17:36:34,306 - server.py[line:28] - INFO: http://localhost:4723/wd/hub/

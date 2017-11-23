@@ -24,5 +24,4 @@ if __name__ == '__main__':
         generate_test_report.ab(creat_case.test_result_list())      # 创建测试报告
         del_past_dir.delete_fp()        # 删除过期的测试报告和log日志
     except Exception as e:
-        print 'e'
-        raise
+        print e

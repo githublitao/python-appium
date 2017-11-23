@@ -1,0 +1,5 @@
+2017-11-23 16:38:19,546 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_16_38_19
+2017-11-23 16:38:19,546 - log.py[line:88] - INFO:   start 初始化用例脚本.
+2017-11-23 16:38:20,851 - log.py[line:90] - INFO:   初始化用例脚本 success.
+2017-11-23 16:38:21,201 - log.py[line:88] - INFO:   start 初始化driver.
+2017-11-23 16:38:22,578 - remote_connection.py[line:478] - DEBUG: POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"alwaysMatch": {"platformName": "Android"}, "firstMatch": [{}]}, "desiredCapabilities": {"deviceName": null, "unicodeKeyboard": true, "app": "H:\\project\\python_appium\\app-client-debug.apk", "resetKeyboard": true, "platformVersion": null, "platformName": "Android"}}

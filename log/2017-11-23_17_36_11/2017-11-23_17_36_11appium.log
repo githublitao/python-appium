@@ -1,0 +1,46 @@
+(node:9444) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 127.0.0.1:4723
+[36minfo[39m: [debug] Non-default server args: {"address":"127.0.0.1","bootstrapPort":9517,"sessionOverride":true,"defaultCommandTimeout":600}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client that we did not find a valid resource
+[36minfo[39m: [37m<-- GET /wd/hub/ [39m[33m404[39m[90m 6.446 ms - 47[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"capabilities":{"alwaysMatch":{"platformName":"Android"},"firstMatch":[{}]},"desiredCapabilities":{"deviceName":"Connect Fail,Please reconnect Device...","unicodeKeyboard":true,"app":"H:\\project\\python_appium\\app-client-debug.apk","resetKeyboard":true,"platformVersion":null,"platformName":"Android"}}[39m
+[36minfo[39m: Client User-Agent string: Python http auth
+[36minfo[39m: [debug] No appActivity desired capability or server param. Parsing from apk.
+[36minfo[39m: [debug] No appPackage desired capability or server param. Parsing from apk.
+[36minfo[39m: [debug] Using local app from desired caps: H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] Creating new appium session d7c2ef37-a25c-4aad-8571-2dc057a3a7fb
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_101
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from F:\测试工具安装包\sdk\platform-tools\adb.exe
+[36minfo[39m: [debug] Parsing package and activity from app manifest
+[36minfo[39m: [debug] Checking whether aapt is present
+[36minfo[39m: [debug] Using aapt from F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe
+[36minfo[39m: [debug] Extracting package and launch activity from manifest.
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\build-tools\android-4.4W\aapt.exe dump badging H:\project\python_appium\app-client-debug.apk
+[36minfo[39m: [debug] badging package: com.sixty.nidoneClient
+[36minfo[39m: [debug] badging act: com.sixty.nidoneClient.view.activity.SDK_WebApp
+[36minfo[39m: [debug] Parsed package and activity are: com.sixty.nidoneClient/com.sixty.nidoneClient.view.activity.SDK_WebApp
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Checking whether app is actually present
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 0 device(s) connected
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe kill-server
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 0 device(s) connected
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe kill-server
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: F:\测试工具安装包\sdk\platform-tools\adb.exe devices
+
+H:\project\python_appium\case>

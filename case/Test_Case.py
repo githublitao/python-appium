@@ -1,11 +1,9 @@
 #! /usr/bin/python
 # -*- coding:utf-8 -*-
 import unittest
-import time
 from common import log
 from common import operation
 from common import creat_case
-import TouchAction
 # 测试用例
 
 
@@ -39,6 +37,7 @@ class Test(ParametrizedTestCase):
     @log.deco(u"正常登录1")
     def test_login1(self):
         try:
+            self.OP.sw_app()
             self.OP.send_keys("login", "账号", "18202886911")
             self.OP.clicks("login", "密码")
             self.OP.send_keys("login", "密码", "123")

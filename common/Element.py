@@ -126,7 +126,7 @@ class Element:
 
     # 切换至app原生
     def switch_app(self):
-        self.driver.witch_to.context("NATIVE_APP")
+        self.driver.switch_to.context("NATIVE_APP")
 
     # 获取当前页面的树形结构源代码，与uiautomatorviewer截屏所展示出来的结构是相同的，判断是否存在，不存在返回-1
     def get_page(self, key):

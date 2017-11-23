@@ -1,0 +1,9 @@
+2017-11-23 17:21:14,335 - log.py[line:34] - INFO: 测试开始时间：2017-11-23_17_21_14
+2017-11-23 17:21:14,335 - server.py[line:18] - INFO: start /b taskkill /F /IM node.exe
+2017-11-23 17:21:14,345 - server.py[line:20] - INFO: 启动appium服务
+2017-11-23 17:21:14,345 - server.py[line:23] - INFO: start /b appium -a 127.0.0.1 -p 4723 --bootstrap-port 9517 --session-override --command-timeout 600
+2017-11-23 17:21:14,365 - server.py[line:27] - INFO: http://localhost:4723/wd/hub/
+2017-11-23 17:21:14,365 - connectionpool.py[line:208] - DEBUG: Starting new HTTP connection (1): 127.0.0.1
+2017-11-23 17:21:16,407 - connectionpool.py[line:396] - DEBUG: http://127.0.0.1:8888 "GET http://localhost:4723/wd/hub/ HTTP/1.1" 502 None
+2017-11-23 17:21:16,407 - server.py[line:35] - ERROR: 启动appium服务失败 exceptions must be old-style classes or derived from BaseException, not NoneType
+2017-11-23 17:21:16,407 - log.py[line:88] - INFO:   start 初始化用例脚本.

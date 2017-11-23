@@ -7,11 +7,13 @@
 
 #  case_num  总的测试用例数量
 def test_case_list(case_num):
+    print case_num
     while True:
         try:
             all_or_part = raw_input('请选择：1.运行全部用例    2.运行部分用例\n'
                                     '》》')
             if int(all_or_part) == 2:
+                print 2
                 while True:
                     try:
                         print '-'*50
@@ -31,9 +33,9 @@ def test_case_list(case_num):
                         else:
                             return int(fist), int(end)+1
                     except:
-                        print "输入有误！！"
+                        print "输入有误！！1"
             elif int(all_or_part) == 1:
+                print case_num
                 return 1, case_num
         except:
-            print "输入有误！！"
-
+            print '输入有误'

@@ -1,0 +1,10 @@
+(node:9684) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 127.0.0.1:4723
+[36minfo[39m: [debug] Non-default server args: {"address":"127.0.0.1","bootstrapPort":9517,"sessionOverride":true,"defaultCommandTimeout":600}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client that we did not find a valid resource
+[36minfo[39m: [37m<-- GET /wd/hub/ [39m[33m404[39m[90m 7.890 ms - 47[39m [90m[39m
+
+H:\project\python_appium\case>
