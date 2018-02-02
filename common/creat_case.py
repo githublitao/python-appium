@@ -5,20 +5,18 @@ Created on 2017年8月22日
 
 @author: li tao
 """
-import ReadData
+import xlwt as xlwt
+
 from case import run_list
 from Exception import Custom_exception
 import logging
 import logging.config
-import mkdir_log_directory
-import runtime
-import Path
-import xlwt
-import log
+from common import ReadData, Path, runtime, mkdir_log_directory, log
+
 l = []
 
 
-@log.deco(u'初始化用例脚本')
+@log.deco('初始化用例')
 def test_case():
     global l
     case_excel = ReadData.ReadCaseExcel()
@@ -115,11 +113,16 @@ def test_case():
         raise Custom_exception.CloseFileError
 
 
-# 错误处理
-# e 报错内容
-# index 用例编号
-# method_name
 def exception_handling(e, index=None, test_name=None, method_name=None, op=None):
+    """
+    错误处理
+    :param e: 报错内容
+    :param index: 用例编号
+    :param test_name: 测试用例名称
+    :param method_name: 测试用例对应方法
+    :param op: 操作驱动
+    :return:
+    """
     global l
     logging.error(e)
     path = Path.report_path() + runtime.test_start_time() + '_error'
@@ -159,9 +162,11 @@ def set_style(name, height, bold=False):
     return style
 
 
-# 初始化测试结果表
-# case_num 测试数据list
 def write_excel():
+    """
+    初始化结果表
+    :return:
+    """
     global l
     # 创建工作簿
     try:

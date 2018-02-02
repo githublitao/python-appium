@@ -5,6 +5,7 @@ Created on 2017年8月22日
 
 @author: li tao
 """
+from Report import configemail
 from common import Path, log
 import smtplib
 import email.MIMEMultipart
@@ -12,7 +13,6 @@ import email.MIMEText
 import os.path  
 import mimetypes  
 import email.MIMEImage
-import configemail
 import logging
 
 

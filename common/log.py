@@ -6,11 +6,10 @@ Created on 2017年8月24日
 @author: li tao
 """
 import logging
-import Path
 import logging.config
-import runtime
 from Exception import Custom_exception
-import codecs
+
+from common import Path, runtime
 
 
 def log_config():
@@ -38,7 +37,7 @@ def log_config():
         #                     filename=Path.log_path()+runtime.test_start_time()+'.log',
         #                     filemode='w')
     except Exception as e:
-        print e
+        print(e)
         raise Custom_exception.LogConfigError
 
 

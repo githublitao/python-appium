@@ -6,7 +6,7 @@ Created on 2017年8月24日
 @author: li tao
 """
 from BasePage.ReadXml import BastPage
-import Path
+from common import Path
 
 
 class Locator:

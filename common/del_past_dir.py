@@ -8,12 +8,14 @@ Created on 2017年9月30日
 import shutil
 import time
 import datetime
-import Path
 import os
 import logging
 
 
 #   删除文件
+from common import Path
+
+
 def delete_fp():
     try:
         lg = [Path.father_path+'\\log', Path.report_path()]
@@ -23,12 +25,12 @@ def delete_fp():
                 for i in range(0, len(ls)):
                     path = os.path.join(lg, ls[i])
                     if os.path.exists(path):
-                        creat_time = time.localtime(os.stat(path).st_ctime)     # 文件最后访问时间
-                        y = time.strftime('%Y', creat_time)
-                        m = time.strftime('%m', creat_time)
-                        d = time.strftime('%d', creat_time)
-                        h = time.strftime('%H', creat_time)
-                        M = time.strftime('%M', creat_time)
+                        create_time = time.localtime(os.stat(path).st_ctime)     # 文件最后访问时间
+                        y = time.strftime('%Y', create_time)
+                        m = time.strftime('%m', create_time)
+                        d = time.strftime('%d', create_time)
+                        h = time.strftime('%H', create_time)
+                        M = time.strftime('%M', create_time)
                         d2 = datetime.datetime(int(y), int(m), int(d), int(h), int(M))  # 格式化时间
                         time_difference = (datetime.datetime.now()-d2).days         # 计算时间差
                         if time_difference >= 2:                           # 时间差超过10天，则删除

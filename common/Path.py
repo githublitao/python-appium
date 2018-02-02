@@ -7,8 +7,9 @@ Created on 2017年8月21日
 """
 #   封装配置文件地址
 import os
-import runtime
-import mkdir_log_directory
+
+from common import runtime, mkdir_log_directory
+
 pwd = os.getcwd()
 father_path = os.path.abspath(os.path.dirname(pwd)+os.path.sep+".")
 
@@ -32,10 +33,13 @@ def log_path():
     return path
 
 
-#   prefix 匹配前缀文件
-#   postfix匹配后缀文件
 def scan_files(prefix=None, postfix=None):
-    #   返回文件路径
+    """
+    返回文件绝对路径
+    :param prefix: 匹配前缀文件
+    :param postfix: 匹配后缀文件
+    :return:
+    """
     files_list = []
     for root, sub_dirs, files in os.walk(father_path):
         for special_file in files:

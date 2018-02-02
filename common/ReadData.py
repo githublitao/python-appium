@@ -5,10 +5,11 @@ Created on 2017年5月5日
 @author: lt
 """
 #   读取测试用例
-import xlrd
+import xlrd as xlrd
+
 from Exception import Custom_exception
-import Path
-import creat_case
+from common import Path, creat_case
+
 case = []
 
 
@@ -24,11 +25,14 @@ class ReadCaseExcel:
             creat_case.exception_handling(e)
             raise Custom_exception.OpenXlsError
 
-    # 构建测试结果表
-    # fist 开始用例编号
-    # end 结束用例编号
     @staticmethod
     def result_list(first, end):
+        """
+        构造测试结果表
+        :param first: 开始用例编号
+        :param end: 结束用例编号
+        :return:
+        """
         global case
         results = []
         for case_id in range(first, end):
@@ -48,14 +52,19 @@ class ReadCaseExcel:
             results.append(single_results)
         return results
 
-    # 用例条数
     def case_num(self):
+        """
+        用例条数
+        :return:
+        """
         return self.case_num
 
 
 class ReadStepExcel:
-    # fp 测试步骤表路径
-    # case 测试用例数据列表
+    """
+    fp 测试步骤表路径
+    case 测试用例数据列表
+    """
     def __init__(self):
         global case
         try:
@@ -67,9 +76,12 @@ class ReadStepExcel:
             creat_case.exception_handling(e)
             raise Custom_exception.OpenXlsError
 
-#   根据传入的测试用例case_id，获得该case的操作步骤
-#   case_id 测试用例编号
     def get_case_desc(self, case_id):
+        """
+        根据传入的测试用例case_id，获得该case的操作步骤
+        :param case_id: 测试用例编号
+        :return:
+        """
         # pattern = re.compile(ur'[1-9]\d*')       # 正则用于匹配数字
         # pattern1 = re.compile("'(.*?)'")         # 正则用于匹配字符串
         test_procedure = []                     # 用例操作步骤列表

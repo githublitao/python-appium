@@ -7,7 +7,9 @@ Created on 2017年8月22日
 """
 import time
 import datetime
-import creat_case
+
+from common import creat_case
+
 try:
     runtime = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
     start_time = datetime.datetime.now()

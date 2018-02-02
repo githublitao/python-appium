@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from appium.webdriver.common.touch_action import TouchAction
 from Exception import Custom_exception
-import creat_case
+from common import creat_case
 
 
 class Element:
@@ -21,9 +21,12 @@ class Element:
     def __init__(self, driver):
         self.driver = driver
 
-    # 获取页面元素
-    # message  单个元素信息列表包含，方式tpye， 超时时间time， 值value
     def get(self, message):
+        """
+        获取页面元素
+        :param message: 单个元素信息列表包含，方式type， 超时时间time， 值value
+        :return:
+        """
         way, timeout, value = message
         way_list = ['xpath', 'id', 'ids', 'name', 'classes_name', 'accessibility_id']
         for i in way_list:
@@ -48,9 +51,12 @@ class Element:
             else:
                 raise Custom_exception.WrongLocation
 
-    # 等待页面元素加载
-    # message  单个元素信息列表包含，方式tpye， 超时时间time， 值value
     def wait_element(self, message):
+        """
+        等待页面元素加载
+        :param message: 单个元素信息列表包含，方式tpye， 超时时间time， 值value
+        :return:
+        """
         way, timeout, value = message
         timeout = int(timeout)
         way_list = ['xpath', 'id', 'name', 'classes_name']
@@ -70,68 +76,105 @@ class Element:
             else:
                 raise Custom_exception.WrongLocation
 
-    # 关闭driver
     def over(self):
+        """
+        关闭driver
+        :return:
+        """
         try:
             element = self.driver.quit()
             return element
         except Exception as e:
             creat_case.exception_handling(e)
 
-    # 截图
-    # path  截图存放位置路径
     def get_screen(self, path):
+        """
+        截图
+        :param path: 图片存放路径
+        :return:
+        """
         self.driver.get_screenshot_as_file(path)
 
-    # 获取屏幕大小
     def get_size(self):
+        """
+        获取屏幕大小
+        :return:
+        """
         size = self.driver.get_window_size()
         return size
 
-    # 向上移动
     def swipe_to_up(self):
+        """
+        向上移动
+        :return:
+        """
         window_size = self.get_size()
         width = window_size.get("width")
         height = window_size.get("height")
         self.driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, 500)
 
-    # 向下移动
     def swipe_to_down(self):
+        """
+        向下移动
+        :return:
+        """
         window_size = self.get_size()
         width = window_size.get("width")
         height = window_size.get("height")
         self.driver.swipe(width / 2, height / 4, width / 2, height * 3 / 4, 500)
 
-    # 向左移动
     def swipe_to_left(self):
+        """
+        向左移动
+        :return:
+        """
         window_size = self.get_size()
         width = window_size.get("width")
         height = window_size.get("height")
         self.driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, 500)
 
-    # 向右移动
     def swipe_to_right(self):
+        """
+        向右移动
+        :return:
+        """
         window_size = self.get_size()
         width = window_size.get("width")
         height = window_size.get("height")
         self.driver.swipe(width * 4 / 5, height / 2, width / 5, height / 2, 500)
 
-    # 物理键返回
     def back(self):
+        """
+        物理键返回
+        :return:
+        """
         self.driver.keyevent(4)
 
-    # 切换至web_view
     def switch_h5(self):
+        """
+        切换至webview
+        :return:
+        """
         self.driver.switch_to.context("WEBVIEW")
 
-    # 切换至app原生
     def switch_app(self):
+        """
+        切换至app原生页面
+        :return:
+        """
         self.driver.switch_to.context("NATIVE_APP")
 
-    # 获取当前页面的树形结构源代码，与uiautomatorviewer截屏所展示出来的结构是相同的，判断是否存在，不存在返回-1
     def get_page(self, key):
+        """
+        获取当前页面的树形结构源代码，与uiautomatorviewer截屏所展示出来的结构是相同的，判断是否存在，不存在返回-1
+        :param key:
+        :return:
+        """
         return self.driver.page_source.find(key)
 
-    # 摇一摇手机
     def friend_shake(self):
+        """
+        摇一摇手机
+        :return:
+        """
         self.driver.shake()

@@ -8,10 +8,10 @@ Created on 2017年9月30日
 import subprocess
 import logging
 import os
-import Path
-import runtime
 import requests
 import time
+
+from common import Path, runtime
 
 
 def start_server():
@@ -28,11 +28,11 @@ def start_server():
         logging.info(appium_server_url)
         time.sleep(5)
         response = requests.get(appium_server_url)
-        print response.status_code
+        print(response.status_code)
         if response.status_code is 404:
             logging.info('appium服务启动成！！')
         else:
-            raise
+            raise Exception
     except Exception as a:
         logging.error('启动appium服务失败 %s' % a)
 

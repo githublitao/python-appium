@@ -12,11 +12,13 @@ from common import Path
 from common import log
 from common import creat_case
 from Exception import Custom_exception
-PATH=lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
-#   初始化driver
+PATH = lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
 
 
 class Driver:
+    """
+    初始化driver
+    """
     @log.deco(u'初始化driver')
     def __init__(self):
         try:

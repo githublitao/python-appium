@@ -6,8 +6,6 @@ Created on 2017年8月28日
 @author: li tao
 """
 import os
-import logging
-import creat_case
 
 
 def mk_dir(path):
@@ -28,7 +26,7 @@ def mk_dir(path):
             # 创建目录操作函数
             os.makedirs(path)
         except Exception as e:
-            print e
+            print(e)
     else:
         # 如果目录存在则不创建，并提示目录已存在
         pass

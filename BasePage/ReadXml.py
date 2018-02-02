@@ -14,8 +14,11 @@ class BastPage:
     """
     封装读取page.xml
     """
-    # filename    page.xml文件路径
     def __init__(self, filename):
+        """
+
+        :param filename: page.xml文件路径
+        """
         try:
             self.level = 1  # 节点的深度从1开始
             self.root = xml.etree.ElementTree.parse(filename).getroot()
@@ -24,12 +27,15 @@ class BastPage:
             logging.error(e)
             raise Custom_exception.ReadXmlError
 
-    # 遍历所有的节点
-    # root_node
-    # level 节点深度
-    # page_name  页面名称
-    # locator   元素名称
     def walk_data(self, root_node, level, page_name, locator):
+        """
+        遍历所有的节点
+        :param root_node:
+        :param level:  节点深度
+        :param page_name: 页面名称
+        :param locator: 元素名称
+        :return:
+        """
         if root_node.text.encode('utf-8') == locator:
             self.result_list = root_node.attrib
             return
@@ -45,8 +51,12 @@ class BastPage:
             except:
                 pass
 
-    #  page_name 页面名称
-    #  locator  元素名称
     def run(self, page_name, locator):
+        """
+
+        :param page_name: 页面名称
+        :param locator:  元素名称
+        :return:
+        """
         result = self.walk_data(self.root, self.level, page_name, locator)
         return result

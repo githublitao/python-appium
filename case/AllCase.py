@@ -9,8 +9,8 @@ case_path = os.path.join(os.getcwd())
 # 获取所有py文件中所有test开头的用力
 def all_case():
     discover = unittest.defaultTestLoader.discover(case_path,
-                                                    pattern="test*.py",
-                                                    top_level_dir=None)
+                                                   pattern="test*.py",
+                                                   top_level_dir=None)
     return discover
 
 

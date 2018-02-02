@@ -5,8 +5,9 @@ Created on 2017年8月23日
 
 @author: li tao
 """
+import logging
 
-import AllCase
+from case import AllCase
 from common import creat_case
 from common import log
 from common import server
@@ -24,4 +25,5 @@ if __name__ == '__main__':
         generate_test_report.ab(creat_case.test_result_list())      # 创建测试报告
         del_past_dir.delete_fp()        # 删除过期的测试报告和log日志
     except Exception as e:
-        print e
+        logging.exception("ERROR")
+        print(e)

@@ -5,27 +5,29 @@ Created on 2017年8月21日
 
 @author: li tao
 """
-import configparser
-import Path
-from Exception import Custom_exception
-import creat_case
+
 import subprocess
 import logging
 import re
-import log
 
 
 def connect_dvs():
-    """检查设备是否连接成功，如果成功返回True，否则返回False"""
+    """
+    检查设备是否连接成功，如果成功返回True，否则返回False
+    """
     try:
-        """获取设备列表信息，并用"\r\n"拆分"""
+        """
+        获取设备列表信息，并用"\r\n"拆分
+        """
         device_info = subprocess.check_output('adb devices').split("\r\n")
-        """如果没有链接设备或者设备读取失败，第二个元素为空"""
+        """
+        如果没有链接设备或者设备读取失败，第二个元素为空
+        """
         if device_info[1] == '':
             return False
         else:
             return True
-    except Exception, e:
+    except Exception as e:
         logging.error("Device Connect Fail:", e)
 
 
@@ -39,7 +41,7 @@ def get_android_version():
             return android_version
         else:
             return "Connect Fail,Please reconnect Device..."
-    except Exception, e:
+    except Exception as e:
         logging.error("Get Android Version:", e)
 
 
@@ -52,5 +54,5 @@ def get_device_name():
             return device_nam
         else:
             return "Connect Fail,Please reconnect Device..."
-    except Exception, e:
+    except Exception as e:
         logging.error("Get Device Name:", e)
